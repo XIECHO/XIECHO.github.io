@@ -40,11 +40,11 @@
       <category term="tools" scheme="http://yoursite.com/categories/tools/"/>
     
     
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
       <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
