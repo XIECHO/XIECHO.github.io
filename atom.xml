@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-13T06:25:15.229Z</updated>
+  <updated>2018-01-14T06:39:24.152Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/01/13/%E5%A4%9A%E4%B8%AA%E7%94%B5%E8%84%91%E4%B8%80%E8%B5%B7%E5%86%99blog/"/>
     <id>http://yoursite.com/2018/01/13/多个电脑一起写blog/</id>
     <published>2018-01-13T05:16:55.000Z</published>
-    <updated>2018-01-13T06:25:15.229Z</updated>
+    <updated>2018-01-14T06:39:24.152Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。</p></blockquote><p>传送门送上：<a href="http://blog.csdn.net/Monkey_LZL/article/details/60870891" target="_blank" rel="noopener">1</a>，<a href="https://righere.github.io/2016/10/10/install-hexo/" target="_blank" rel="noopener">2</a><br>第一篇的文章比较短，但是就是精华，第二篇，有部分图文，会给你一些更直观的参考。</p><p>我呢，还是给大家一些<strong>建议</strong></p><ol><li>不要怕出错，说实话，对于一个小白来说，什么也不懂，什么是git啊，没关系，不要担心，要相信自己。</li><li>尽管你可能不懂git,可是这玩意还是不得不学的额，常见的命令<ul><li>git pull origin hexo: 本机同步GitHub里的文章</li><li>git push origin hexo: 上传文章到GitHub</li></ul></li></ol>]]></content>
     
@@ -75,9 +75,9 @@
     <link href="http://yoursite.com/2018/01/13/first/"/>
     <id>http://yoursite.com/2018/01/13/first/</id>
     <published>2018-01-13T05:05:14.602Z</published>
-    <updated>2018-01-13T05:05:14.602Z</updated>
+    <updated>2018-01-14T06:38:07.399Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3><blockquote><p>你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！  /(ㄒoㄒ)/~~</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -124,7 +124,7 @@
     <link href="http://yoursite.com/2018/01/12/hexo-github/"/>
     <id>http://yoursite.com/2018/01/12/hexo-github/</id>
     <published>2018-01-12T07:27:37.000Z</published>
-    <updated>2018-01-13T05:05:14.602Z</updated>
+    <updated>2018-01-14T06:38:59.473Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>我来猜一猜你为什么要建博客：装逼，找个地方发泄，无聊。。。<br>如果不对，你可以留言告诉我 ^_^</p></blockquote><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你是小白，那你肯定会受好多挫，你可以百度也可以Google，当然我希望什么也不要遇到，因为我会告诉你所有可能的错，别问我为什么 o(╥﹏╥)o</p><h1 id="what-you-need"><a href="#what-you-need" class="headerlink" title="what you need ?"></a>what you need ?</h1><ol><li>git</li><li>hexo</li><li>github</li></ol><a id="more"></a><p>这三个是啥呢？<br><strong>github</strong>，类似于一个服务器，这样别人就可以在网上找到你的博客，当然你也可以自己买服务器。<br><strong>hexo</strong>，模板，就是博客显示页面的样子，有好多好人已经写好了很多好看的模板，你挑一个喜欢的，当然你也可以自己写！<br><strong>git</strong>，上传工具，就是把你写好的东西，上传到网上。</p><h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git下载:</a><br>下载完就可以安装了，一路next</p><p><img src="/images/git1.png" alt="git1"></p><p><img src="/images/git2.png" alt="git2"></p><p><img src="/images/git3.png" alt="git3"></p><p>结束安装，检查自己有木有成功，<strong>Win+R</strong>，cmd<br><img src="/images/gitSuccess.png" alt="gitSuccess"></p><p>如果看见版本号，就成功啦！！是不是很惊喜，很开心，吼简单哦！！</p><h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>恩~，这个地方有点烦的，请注意！！！<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官网：</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档：</a>很详细，可以仔细学习一波。<br>我呢，就给一些<strong>注意事项</strong></p><ol><li>先要安装<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Node.js</a></li><li>在任何地方(比如桌面)右击，点击 git bash here，在输入 npm install -g hexo-cli 回车，输入画面如图：<br><img src="/images/hexo1.png" alt="hexoInstall"></li><li>hexo是使用Markdown解析文章的，那标记后面需要<strong>一个空格</strong><br><img src="/images/hexo2.png" alt="space"><br>图片中每个key后面都有空格，图中的绿色方框，有点大小不一，但都代表一个空格</li><li>最后写完文章部署的时候，可以用<strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</strong>一条命令<br>我在写这个文档的时候，也重看了一边官网，虽说很详细，带我不想看啊，好烦啊，好烦啊，与木有这种感觉，o(╥﹏╥)o</li></ol><h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><p>这个真的是一个好神奇的地方，抄作业的好地方，代码不会写，来抄一波，没有灵感，来搜一波，比什么百度靠谱多了。<br>来一个<a href="https://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener"><strong>传送门</strong></a>，这篇文章在这儿写的很详细贴心，最主要页面看的不是那么难看。</p><h1 id="OK"><a href="#OK" class="headerlink" title="OK"></a>OK</h1><p>我想你已经完成你的博客的建立了，是不是很happy，我当时就老happy了，可是，记住写博客还是一件很艰难的事，时间久了，人就懒了，就不写了。当然，我知道说的不是你，(#^.^#)</p>]]></content>
     
