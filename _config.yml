@@ -69,18 +69,18 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# search:
-##  path: search.xml
-##  field: post
-##  format: html
-##  limit: 10000
+search:
+ path: search.xml
+ field: post
+ format: html
+ limit: 10000
 
-algolia:
-  applicationID: 'HCDIZKUYSW'
-  apikey: 'c305d1ad1e10181c28142a86718d3c39'
-  adminApiKey: '1287483da5729ce49678b5abddcc50fc'
-  indexName: 'bloch'
-  chunkSize: 5000
+# algolia: 
+#   applicationID: 'HCDIZKUYSW'
+#   apikey: 'c305d1ad1e10181c28142a86718d3c39'
+#   adminApiKey: '1287483da5729ce49678b5abddcc50fc'
+#   indexName: 'bloch'
+#   chunkSize: 5000
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
