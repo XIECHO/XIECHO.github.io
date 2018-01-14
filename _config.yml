@@ -77,7 +77,9 @@ pagination_dir: page
 
 algolia:
   applicationID: 'HCDIZKUYSW'
-  indexName: 'getstarted_actors'
+  apikey: 'c305d1ad1e10181c28142a86718d3c39'
+  adminApiKey: '1287483da5729ce49678b5abddcc50fc'
+  indexName: 'bloch'
   chunkSize: 5000
 
 # Extensions
