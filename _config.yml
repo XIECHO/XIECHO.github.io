@@ -69,11 +69,16 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+# search:
+##  path: search.xml
+##  field: post
+##  format: html
+##  limit: 10000
+
+algolia:
+  applicationID: 'HCDIZKUYSW'
+  indexName: 'getstarted_actors'
+  chunkSize: 5000
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
