@@ -79,8 +79,8 @@ menu_icons:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-#scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -478,7 +478,7 @@ calendar:
 # Algolia Search
 algolia_search:
   enable: false
-  
+
   hits:
     per_page: 10
   labels:

@@ -91,4 +91,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/XIECHO/xi.github.io.git
+  repo: 
+    github: https://github.com/XIECHO/xi.github.io.git
+    coding: git@git.coding.net:XIECHO/XIECHO.git
