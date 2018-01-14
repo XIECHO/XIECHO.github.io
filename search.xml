@@ -8,20 +8,20 @@
         <category>tools</category>
       </categories>
       <tags>
-        <tag>git</tag>
         <tag>hexo</tag>
         <tag>github</tag>
+        <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[echo xi]]></title>
-    <url>%2F2018%2F01%2F13%2Ffirst%2F</url>
-    <content type="text"><![CDATA[xixiOK?]]></content>
   </entry>
   <entry>
     <title><![CDATA[Me]]></title>
     <url>%2F2018%2F01%2F13%2FMe%2F</url>
     <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[echo xi]]></title>
+    <url>%2F2018%2F01%2F13%2Ffirst%2F</url>
+    <content type="text"><![CDATA[xixiOK?]]></content>
   </entry>
   <entry>
     <title><![CDATA[git的使用]]></title>
