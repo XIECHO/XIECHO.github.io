@@ -1,10 +1,7 @@
 ---
 title: 多个电脑一起写blog
 date: 2018-01-13 13:16:55
-tags: 
-- git
-- hexo
-- github
+tags: [git,hexo,github]
 categories: tools
 ---
 > 你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。

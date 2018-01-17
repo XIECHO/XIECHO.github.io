@@ -1,9 +1,7 @@
 ---
 title: 如何建立一个独立博客
 date: 2018-01-12 15:27:37
-tags:
-- hexo
-- github
+tags: [hexo,github]
 categories: tools
 ---
 > 我来猜一猜你为什么要建博客：装逼，找个地方发泄，无聊。。。
