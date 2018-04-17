@@ -99,6 +99,7 @@ theme: next
 deploy:
   type: git
   repo: 
-    github: https://github.com/XIECHO/xi.github.io.git
+    github: git@github.com:XIECHO/xi.github.io.git
     coding: https://git.coding.net/XIECHO/XIECHO.git
+   
   branch: master
