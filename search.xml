@@ -8,7 +8,7 @@
   <entry>
     <title><![CDATA[顺时针打印矩阵]]></title>
     <url>%2F2018%2F04%2F17%2F417%2F</url>
-    <content type="text"><![CDATA[题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. 代码]]></content>
+    <content type="text"><![CDATA[题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. 代码 123456789101112131415161718192021222324252627282930313233343536373839404142import java.util.ArrayList;public class Solution &#123; public ArrayList&lt;Integer&gt; printMatrix(int [][] matrix) &#123; ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(); //判断matrix是否为空 if(matrix == null || matrix.length == 0) return list; //matrix的行 int row = matrix.length; //matrix的列 int col = matrix[0].length; //方便矩阵的遍历 int rowStart = 0; int rowEnd = row - 1; int colStart = 0; int colEnd = col - 1; while(colStart &lt;= colEnd &amp;&amp; rowStart &lt;= rowEnd) &#123; for(int i = colStart; i &lt;= colEnd; i++) list.add(matrix[rowStart][i]); for(int i = rowStart+1; i &lt;= rowEnd; i++) list.add(matrix[i][colEnd]); //防止重复遍历 if(rowStart != rowEnd) &#123; for(int i = colEnd-1; i &gt;= colStart; i--) list.add(matrix[rowEnd][i]); &#125; //防止重复遍历 if(colStart != colEnd) &#123; for(int i = rowEnd-1; i &gt; rowStart; i--) list.add(matrix[i][colStart]); &#125; colStart++; colEnd--; rowStart++; rowEnd--; &#125; return list; &#125;&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[这几天]]></title>
