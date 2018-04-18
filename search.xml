@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F04%2F18%2Fpython1%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[顺时针打印矩阵]]></title>
+    <url>%2F2018%2F04%2F17%2F417%2F</url>
+    <content type="text"><![CDATA[题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. 代码]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[这几天]]></title>
+    <url>%2F2018%2F01%2F22%2F1.22%2F</url>
+    <content type="text"><![CDATA[好多天没有来玩博客，Markdown的语法也忘了，hexo的命令也忘了，导师的教我写的东西，一个月没碰了，啥啥啥都忘了。。。。 前几天无聊看了一波python文档，把廖老师写的文档和《简明Python教程》过了一遍，然后发现这是一个神奇的世界。 恩，写这个文章，其实也不是说我要介绍我这天的心得体会，就只是来冒个泡，写文章真的需要坚持，如果你不是职业的话，而且，我发现的我不知道写啥，内心啥也木有， 这几天看了一波吐槽大会，interesting，哈哈哈哈哈哈哈哈，然后还去下了一波《手把手教你脱口秀》，好有意思。 我还准备买个陶笛，人生最大的梦想，懂一波音乐。 这几天，大家都放假，氛围特别浓重，说实话，我都给自己放一个月了。。。。 不知道自己写了什么，就当记录一下吧，byebye。。。。。]]></content>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[多个电脑一起写blog]]></title>
-    <url>%2F2018%2F01%2F13%2F%E5%A4%9A%E4%B8%AA%E7%94%B5%E8%84%91%E4%B8%80%E8%B5%B7%E5%86%99blog%2F</url>
+    <url>%2F2018%2F01%2F13%2Fblog%2F</url>
     <content type="text"><![CDATA[你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。 传送门送上：1，2第一篇的文章比较短，但是就是精华，第二篇，有部分图文，会给你一些更直观的参考。 我呢，还是给大家一些建议 不要怕出错，说实话，对于一个小白来说，什么也不懂，什么是git啊，没关系，不要担心，要相信自己。 尽管你可能不懂git,可是这玩意还是不得不学的额，常见的命令 git pull origin hexo: 本机同步GitHub里的文章 git push origin hexo: 上传文章到GitHub]]></content>
       <categories>
         <category>tools</category>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-14T06:39:24.152Z</updated>
+  <updated>2018-04-18T01:28:16.127Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,73 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/04/18/python1/"/>
+    <id>http://yoursite.com/2018/04/18/python1/</id>
+    <published>2018-04-18T01:28:16.127Z</published>
+    <updated>2018-04-18T01:28:16.127Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>顺时针打印矩阵</title>
+    <link href="http://yoursite.com/2018/04/17/417/"/>
+    <id>http://yoursite.com/2018/04/17/417/</id>
+    <published>2018-04-17T13:10:39.000Z</published>
+    <updated>2018-04-18T02:19:51.758Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote><p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16<br>则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>这几天</title>
+    <link href="http://yoursite.com/2018/01/22/1.22/"/>
+    <id>http://yoursite.com/2018/01/22/1.22/</id>
+    <published>2018-01-22T07:09:07.000Z</published>
+    <updated>2018-04-18T01:28:16.125Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>好多天没有来玩博客，Markdown的语法也忘了，hexo的命令也忘了，导师的教我写的东西，一个月没碰了，啥啥啥都忘了。。。。</p></blockquote><p>前几天无聊看了一波python文档，把<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener">廖老师</a>写的文档和<a href="http://vdisk.weibo.com/s/BE2Z8B94-5w97" target="_blank" rel="noopener">《简明Python教程》</a>过了一遍，然后发现这是一个神奇的世界。</p><p>恩，写这个文章，其实也不是说我要介绍我这天的心得体会，就只是来冒个泡，写文章真的需要坚持，如果你不是职业的话，而且，我发现的我不知道写啥，内心啥也木有，</p><p>这几天看了一波吐槽大会，interesting，哈哈哈哈哈哈哈哈，然后还去下了一波<a href="https://tieba.baidu.com/p/5326039455?red_tag=1628684649" target="_blank" rel="noopener">《手把手教你脱口秀》</a>，好有意思。</p><p>我还准备买个陶笛，人生最大的梦想，懂一波音乐。</p><p>这几天，大家都放假，氛围特别浓重，说实话，我都给自己放一个月了。。。。</p><p>不知道自己写了什么，就当记录一下吧，byebye。。。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;好多天没有来玩博客，Markdown的语法也忘了，hexo的命令也忘了，导师的教我写的东西，一个月没碰了，啥啥啥都忘了。。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前几天无聊看了一波python文档，把&lt;a href=&quot;https://www
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://yoursite.com/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>多个电脑一起写blog</title>
-    <link href="http://yoursite.com/2018/01/13/%E5%A4%9A%E4%B8%AA%E7%94%B5%E8%84%91%E4%B8%80%E8%B5%B7%E5%86%99blog/"/>
-    <id>http://yoursite.com/2018/01/13/多个电脑一起写blog/</id>
+    <link href="http://yoursite.com/2018/01/13/blog/"/>
+    <id>http://yoursite.com/2018/01/13/blog/</id>
     <published>2018-01-13T05:16:55.000Z</published>
-    <updated>2018-01-14T06:39:24.152Z</updated>
+    <updated>2018-04-18T01:28:16.127Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。</p></blockquote><p>传送门送上：<a href="http://blog.csdn.net/Monkey_LZL/article/details/60870891" target="_blank" rel="noopener">1</a>，<a href="https://righere.github.io/2016/10/10/install-hexo/" target="_blank" rel="noopener">2</a><br>第一篇的文章比较短，但是就是精华，第二篇，有部分图文，会给你一些更直观的参考。</p><p>我呢，还是给大家一些<strong>建议</strong></p><ol><li>不要怕出错，说实话，对于一个小白来说，什么也不懂，什么是git啊，没关系，不要担心，要相信自己。</li><li>尽管你可能不懂git,可是这玩意还是不得不学的额，常见的命令<ul><li>git pull origin hexo: 本机同步GitHub里的文章</li><li>git push origin hexo: 上传文章到GitHub</li></ul></li></ol>]]></content>
     
