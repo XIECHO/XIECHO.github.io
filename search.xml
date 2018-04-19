@@ -1,358 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[从尾到头打印链表]]></title>
-      <url>/2018/04/19/419/</url>
-      <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>输入一个链表，从尾到头打印链表每个节点的值。</p>
-</blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*    public class ListNode &#123;</span></span><br><span class="line"><span class="comment">*        int val;</span></span><br><span class="line"><span class="comment">*        ListNode next = null;</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*        ListNode(int val) &#123;</span></span><br><span class="line"><span class="comment">*            this.val = val;</span></span><br><span class="line"><span class="comment">*        &#125;</span></span><br><span class="line"><span class="comment">*    &#125;</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">printListFromTailToHead</span><span class="params">(ListNode listNode)</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//存取链表中的数据</span></span><br><span class="line">     	ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">     	<span class="comment">//存取list的反向数据</span></span><br><span class="line">		ArrayList&lt;Integer&gt; list1 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="comment">//如果为空，啥也不做</span></span><br><span class="line">		<span class="keyword">if</span>(listNode == <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> list1;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(listNode!=<span class="keyword">null</span>) &#123;</span><br><span class="line">			list.add(listNode.val);</span><br><span class="line">			listNode = listNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = list.size()-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">			list1.add(list.get(i));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>链表读取存储到ArrayList中，然后再从ArrayList反向读取存储到另一个ArrayList（就是栈的操作）</p>
-<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 我不是很确定空的ArrayList输出是什么，是”[]”;</p>
-<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>1 <strong>链表</strong></p>
-]]></content>
-      
-        <categories>
-            
-            <category> algorithm </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 链表 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[删除链表中重复的结点]]></title>
-      <url>/2018/04/18/418/</url>
-      <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。 例如，链表1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 处理后为 1-&gt;2-&gt;5</p>
-</blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> public class ListNode &#123;</span></span><br><span class="line"><span class="comment">    int val;</span></span><br><span class="line"><span class="comment">    ListNode next = null;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    ListNode(int val) &#123;</span></span><br><span class="line"><span class="comment">        this.val = val;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplication</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">        ListNode result;</span><br><span class="line">            ListNode temp=pHead;</span><br><span class="line">            ListNode index=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">            index.next=pHead;</span><br><span class="line">            result=index;</span><br><span class="line">            <span class="keyword">while</span>(temp!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(temp.next!=<span class="keyword">null</span>&amp;&amp;temp.next.val==temp.val)&#123;</span><br><span class="line">                    <span class="keyword">while</span>(temp.next!=<span class="keyword">null</span>&amp;&amp;temp.next.val==temp.val)&#123;</span><br><span class="line">                    temp=temp.next;</span><br><span class="line">                    &#125;</span><br><span class="line">                    temp=temp.next;</span><br><span class="line">                    index.next=temp;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    index=index.next;</span><br><span class="line">                    temp=temp.next;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> result.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 第一次提交删除了重复的节点，题目要求是所有重复的节点，一个也不留<br>2 对于Java中引用理解需要加深<br>3 链表的操作需要了解，这里尽管只有删除</p>
-<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>1 <strong>链表</strong><br>1.1 数据结构<br>1.2 操作</p>
-<p>2 <strong>Java中的引用</strong></p>
-]]></content>
-      
-        <categories>
-            
-            <category> algorithm </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 链表 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[顺时针打印矩阵]]></title>
-      <url>/2018/04/17/417/</url>
-      <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16<br>则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">printMatrix</span><span class="params">(<span class="keyword">int</span> [][] matrix)</span> </span>&#123;</span><br><span class="line">	        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">	        <span class="comment">//判断matrix是否为空</span></span><br><span class="line">	        <span class="keyword">if</span>(matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span>)</span><br><span class="line">	        	<span class="keyword">return</span> list;</span><br><span class="line">	        <span class="comment">//matrix的行</span></span><br><span class="line">	        <span class="keyword">int</span> row = matrix.length;</span><br><span class="line">	        <span class="comment">//matrix的列</span></span><br><span class="line">	        <span class="keyword">int</span> col = matrix[<span class="number">0</span>].length;</span><br><span class="line">	        <span class="comment">//方便矩阵的遍历</span></span><br><span class="line">	        <span class="keyword">int</span> rowStart = <span class="number">0</span>;</span><br><span class="line">	        <span class="keyword">int</span> rowEnd = row - <span class="number">1</span>;</span><br><span class="line">	        <span class="keyword">int</span> colStart = <span class="number">0</span>;</span><br><span class="line">	        <span class="keyword">int</span> colEnd = col - <span class="number">1</span>;</span><br><span class="line">	        </span><br><span class="line">	        <span class="keyword">while</span>(colStart &lt;= colEnd &amp;&amp; rowStart &lt;= rowEnd) &#123;</span><br><span class="line">	        	<span class="keyword">for</span>(<span class="keyword">int</span> i = colStart; i &lt;= colEnd; i++)</span><br><span class="line">	        		list.add(matrix[rowStart][i]);</span><br><span class="line">	        	</span><br><span class="line">	        	<span class="keyword">for</span>(<span class="keyword">int</span> i = rowStart+<span class="number">1</span>; i &lt;= rowEnd; i++)</span><br><span class="line">	        		list.add(matrix[i][colEnd]);</span><br><span class="line">	        	</span><br><span class="line">	        	<span class="comment">//防止重复遍历</span></span><br><span class="line">	        	<span class="keyword">if</span>(rowStart != rowEnd) &#123;</span><br><span class="line">	        		<span class="keyword">for</span>(<span class="keyword">int</span> i = colEnd-<span class="number">1</span>; i &gt;= colStart; i--)</span><br><span class="line">	        			list.add(matrix[rowEnd][i]);</span><br><span class="line">	        	&#125;</span><br><span class="line">	        	<span class="comment">//防止重复遍历</span></span><br><span class="line">	        	<span class="keyword">if</span>(colStart != colEnd) &#123;</span><br><span class="line">	        		<span class="keyword">for</span>(<span class="keyword">int</span> i = rowEnd-<span class="number">1</span>; i &gt; rowStart; i--)</span><br><span class="line">	        			list.add(matrix[i][colStart]);</span><br><span class="line">	        	&#125;</span><br><span class="line">	        	colStart++;</span><br><span class="line">	        	colEnd--;</span><br><span class="line">	        	rowStart++;</span><br><span class="line">	        	rowEnd--;</span><br><span class="line">	        &#125;</span><br><span class="line">	        <span class="keyword">return</span> list;</span><br><span class="line">	    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 对于向量，从上到下（从左往右）和从下到上（从右往左）只要遍历一次。如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = &#123;&#123;<span class="number">1</span>&#125;,&#123;<span class="number">2</span>&#125;,&#123;<span class="number">3</span>&#125;,&#123;<span class="number">4</span>&#125;,&#123;<span class="number">5</span>&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>2 很多边界例子不会考虑。</p>
-<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>1 高维数组<br>1.1 如何定义一个二维（更高维）的数组<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span>[][][] three = &#123;&#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;&#125;,&#123;&#123;<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>&#125;&#125;&#125;;</span><br><span class="line"><span class="keyword">int</span>[][] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">2</span>];</span><br></pre></td></tr></table></figure></p>
-<p>1.2数组的长度<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> row = matrix.length;</span><br><span class="line"><span class="keyword">int</span> col = matrix[<span class="number">0</span>].length;</span><br></pre></td></tr></table></figure></p>
-<p>1.3 <code>java Arrays.deepToString()</code>函数<br>将高维数组字符串化</p>
-<h1 id="今天"><a href="#今天" class="headerlink" title="今天"></a>今天</h1><p>人生第一次来做这种题目，说实话不会做，做了会有很多错，尽管看起来很简单。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> algorithm </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> algorithm </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[这几天]]></title>
-      <url>/2018/01/22/1.22/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>好多天没有来玩博客，Markdown的语法也忘了，hexo的命令也忘了，导师的教我写的东西，一个月没碰了，啥啥啥都忘了。。。。</p>
-</blockquote>
-<p>前几天无聊看了一波python文档，把<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener">廖老师</a>写的文档和<a href="http://vdisk.weibo.com/s/BE2Z8B94-5w97" target="_blank" rel="noopener">《简明Python教程》</a>过了一遍，然后发现这是一个神奇的世界。</p>
-<p>恩，写这个文章，其实也不是说我要介绍我这天的心得体会，就只是来冒个泡，写文章真的需要坚持，如果你不是职业的话，而且，我发现的我不知道写啥，内心啥也木有，</p>
-<p>这几天看了一波吐槽大会，interesting，哈哈哈哈哈哈哈哈，然后还去下了一波<a href="https://tieba.baidu.com/p/5326039455?red_tag=1628684649" target="_blank" rel="noopener">《手把手教你脱口秀》</a>，好有意思。</p>
-<p>我还准备买个陶笛，人生最大的梦想，懂一波音乐。</p>
-<p>这几天，大家都放假，氛围特别浓重，说实话，我都给自己放一个月了。。。。</p>
-<p>不知道自己写了什么，就当记录一下吧，byebye。。。。。</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> life </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[多个电脑一起写blog]]></title>
-      <url>/2018/01/13/blog/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。</p>
-</blockquote>
-<p>传送门送上：<a href="http://blog.csdn.net/Monkey_LZL/article/details/60870891" target="_blank" rel="noopener">1</a>，<a href="https://righere.github.io/2016/10/10/install-hexo/" target="_blank" rel="noopener">2</a><br>第一篇的文章比较短，但是就是精华，第二篇，有部分图文，会给你一些更直观的参考。</p>
-<p>我呢，还是给大家一些<strong>建议</strong></p>
-<ol>
-<li>不要怕出错，说实话，对于一个小白来说，什么也不懂，什么是git啊，没关系，不要担心，要相信自己。</li>
-<li>尽管你可能不懂git,可是这玩意还是不得不学的额，常见的命令<ul>
-<li>git pull origin hexo: 本机同步GitHub里的文章</li>
-<li>git push origin hexo: 上传文章到GitHub</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      
-        <categories>
-            
-            <category> tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> git </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> github </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Me]]></title>
-      <url>/2018/01/13/Me/</url>
-      <content type="html"><![CDATA[<p>Hey,大家好！！！<br>你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。</p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[echo xi]]></title>
-      <url>/2018/01/13/first/</url>
-      <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3><blockquote>
-<p>你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！  /(ㄒoㄒ)/~~</p>
-</blockquote>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[git的使用]]></title>
-      <url>/2018/01/13/note/</url>
-      <content type="html"><![CDATA[<h1 id="配置用户名和Email"><a href="#配置用户名和Email" class="headerlink" title="配置用户名和Email"></a>配置用户名和Email</h1><p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “email@example.com”</p>
-<h1 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h1><p>初始化一个Git仓库，使用<strong>git init</strong>命令。<br>添加文件到Git仓库，分两步：</p>
-<ul>
-<li>第一步，使用命令<strong>git add <file></file></strong>，注意，可反复多次使用，添加多个文件；</li>
-<li>第二步，使用命令<strong>git commit -m “”</strong>，完成。</li>
-</ul>
-<h1 id="vim的使用"><a href="#vim的使用" class="headerlink" title="vim的使用"></a>vim的使用</h1><p><strong>i</strong> 进入输入模式<br><strong>ESC</strong> 退出输入模式，进入命令模式<br><strong>:wq</strong> 保存修改并退出vim</p>
-<a id="more"></a>
-<h1 id="状态的查看和比较"><a href="#状态的查看和比较" class="headerlink" title="状态的查看和比较"></a>状态的查看和比较</h1><ul>
-<li>比较 git diff</li>
-<li>查看 git status 文件名</li>
-</ul>
-<h1 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h1><ul>
-<li>查看历史 git log/git log –pretty=online<br>当前版本用HEAD表示，HEAD^表示上一个版本，HEAD^^表示上上版本，HEAD~100表示上100个版本</li>
-<li>回退到当前版本的上一个版本 git reset –hard HEAD^<br>当你回退到以前版本，那当前版本会不见，可以使用 git reset –hard (commit id)来恢复</li>
-<li>记录执行的每一次命令 git reflog<br>通过此条命令可以查看到各个版本commit id</li>
-</ul>
-<p>HEAD指向当前版本<br>git log 查看提交历史<br>git reflog 查看命令历史</p>
-<h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><ul>
-<li>工作区(Working Directory)<br>就是当前目录</li>
-<li>版本库(Repository)<br>工作区中隐藏目录.git,Git的版本库<br>版本库中有：暂存区、第一个分支master、指向master的一个指针HEAD</li>
-<li>暂存区(Stage)<br><strong>把文件往Git版本库里添加的时候，分为两步</strong><br>第一步：git add，意义是把文件添加到暂存区<br>第二步: git commit,意义是将暂存区的所有内容提交到当前分支<br>开始默认我们在master分支</li>
-</ul>
-<p>Git是如何跟踪修改的：每次修改，如果不add到暂存区，那就不会加入到commit中。</p>
-<h1 id="撤销和修改"><a href="#撤销和修改" class="headerlink" title="撤销和修改"></a>撤销和修改</h1><p>命令是：<strong>git checkout – filename</strong></p>
-<ul>
-<li>file自修改后还没有被放到暂存区，使用命令后，返回版本库的状态</li>
-<li>file已经添加到了暂存区，又作了修改，使用命令后，返回暂存区的状态<br>总之，是文件返回最近一次git commit 或 git add 的状态</li>
-</ul>
-<p>命令：git reset HEAD file<br>指的是把暂存区的修改撤销，回到工作区的版本<br>git reset 既可以回退版本，也可以把暂存区的修改回退到工作区。</p>
-<p>总结：</p>
-<ul>
-<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。</li>
-<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。</li>
-<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</li>
-</ul>
-<h1 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h1><p>将已经提交到版本库的文件删除，需要同步git</p>
-<ol>
-<li>git rm file </li>
-<li>git commit -m “”<br>如果是误删<br>git checkout – file</li>
-</ol>
-<h1 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h1><ol>
-<li>要关联一个远程库，使用命令**git remote add origin git@server-name:path/repo-name.git;</li>
-<li>关联后，使用命令<strong>git push -u origin master</strong> 第一次推送master分支的所有内容;</li>
-<li>此后，每次本地提交后，只要有必要，就可以使用命令<strong>git push origin master</strong>推送最新修改;</li>
-</ol>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>ssh:是一个安全协议，git支持git协议。第一次使用ssh的时候，需要设置公钥和私钥，命令是</p>
-<ul>
-<li>ssh-keygen -t rsa -C “youremail@example.com”<br>对应的在用户主目录中会生成.ssh目录，目录中有id_rsa和id_rsa.pub两个文件</li>
-</ul>
-<h1 id="clone远程库"><a href="#clone远程库" class="headerlink" title="clone远程库"></a>clone远程库</h1><p>命令是<strong>git clone git@server-name:path/repo-name.git</strong><br>git支持多种协议，包括https，ssh 等等</p>
-<h1 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h1><ul>
-<li><strong>git checkout -b dev</strong>:创建了dev分支<br>命令等同于：git branch dev ; git checkout dev</li>
-<li><strong>git branch</strong>:查看当前分支，罗列出所有分支</li>
-<li><strong>git merge dev</strong>:将dev分支的工作成果合并到当前分支上</li>
-<li><strong>git branch -d dev</strong>:删除dev分支</li>
-</ul>
-<h1 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h1><p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>用<strong>git log –graph</strong>命令可以看到合并图。<br>好看一点用git log –graph –pretty=oneline –abbrev -commit</p>
-<h1 id="分支策略"><a href="#分支策略" class="headerlink" title="分支策略"></a>分支策略</h1><ul>
-<li>master分支用来发布新版本，平时不东</li>
-<li>dev分支是用来干活的，干完活和master合并</li>
-<li>每个团队成员创建自己的分支，是不是和dev分支合并</li>
-</ul>
-<p>合并时，默认是fast forward合并，合并后删除分支后看不出是合并的，会丢失信息，加上–nn-ff参数就可以使用普通模式合并</p>
-<h1 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h1><p>当我们遇到bug需要修复，手头的任务又没有做完，我们可以使用<strong>git stash</strong>来保护现场，类似于进程中断。当我们修复好bug后，我们可以用<strong>git stash list</strong>查看工作现场。</p>
-<ul>
-<li>git stash</li>
-<li>git stash list</li>
-<li>git stash apply:恢复现场，但不删除stash</li>
-<li>git stash drop:删除stash</li>
-<li>git stash pop:等于上两步</li>
-</ul>
-<h1 id="feature分支"><a href="#feature分支" class="headerlink" title="feature分支"></a>feature分支</h1><p>开发一个新feature，最好创建一个分支；如果要丢弃一个没有被合并过的分支，可以通过git branch -D name 强行删除。</p>
-<h1 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h1><ul>
-<li>git remote :用于查看远程库的信息</li>
-<li>git remote -v :用于查看远程库的详细信息</li>
-<li>git push origin master/dev :master分支需要和远程同步，dev分支也一样，bug分支不需要，feature分支看情况</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[如何建立一个独立博客]]></title>
-      <url>/2018/01/12/hexo-github/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>我来猜一猜你为什么要建博客：装逼，找个地方发泄，无聊。。。<br>如果不对，你可以留言告诉我 ^_^</p>
-</blockquote>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如果你是小白，那你肯定会受好多挫，你可以百度也可以Google，当然我希望什么也不要遇到，因为我会告诉你所有可能的错，别问我为什么 o(╥﹏╥)o</p>
-<h1 id="what-you-need"><a href="#what-you-need" class="headerlink" title="what you need ?"></a>what you need ?</h1><ol>
-<li>git</li>
-<li>hexo</li>
-<li>github</li>
-</ol>
-<a id="more"></a>
-<p>这三个是啥呢？<br><strong>github</strong>，类似于一个服务器，这样别人就可以在网上找到你的博客，当然你也可以自己买服务器。<br><strong>hexo</strong>，模板，就是博客显示页面的样子，有好多好人已经写好了很多好看的模板，你挑一个喜欢的，当然你也可以自己写！<br><strong>git</strong>，上传工具，就是把你写好的东西，上传到网上。</p>
-<h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git下载:</a><br>下载完就可以安装了，一路next</p>
-<p><img src="/images/git1.png" alt="git1"></p>
-<p><img src="/images/git2.png" alt="git2"></p>
-<p><img src="/images/git3.png" alt="git3"></p>
-<p>结束安装，检查自己有木有成功，<strong>Win+R</strong>，cmd<br><img src="/images/gitSuccess.png" alt="gitSuccess"></p>
-<p>如果看见版本号，就成功啦！！是不是很惊喜，很开心，吼简单哦！！</p>
-<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><p>恩~，这个地方有点烦的，请注意！！！<br><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">官网：</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档：</a>很详细，可以仔细学习一波。<br>我呢，就给一些<strong>注意事项</strong></p>
-<ol>
-<li>先要安装<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">Node.js</a></li>
-<li>在任何地方(比如桌面)右击，点击 git bash here，在输入 npm install -g hexo-cli 回车，输入画面如图：<br><img src="/images/hexo1.png" alt="hexoInstall"></li>
-<li>hexo是使用Markdown解析文章的，那标记后面需要<strong>一个空格</strong><br><img src="/images/hexo2.png" alt="space"><br>图片中每个key后面都有空格，图中的绿色方框，有点大小不一，但都代表一个空格</li>
-<li>最后写完文章部署的时候，可以用<strong>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</strong>一条命令<br>我在写这个文档的时候，也重看了一边官网，虽说很详细，带我不想看啊，好烦啊，好烦啊，与木有这种感觉，o(╥﹏╥)o</li>
-</ol>
-<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><p>这个真的是一个好神奇的地方，抄作业的好地方，代码不会写，来抄一波，没有灵感，来搜一波，比什么百度靠谱多了。<br>来一个<a href="https://www.jianshu.com/p/189fd945f38f" target="_blank" rel="noopener"><strong>传送门</strong></a>，这篇文章在这儿写的很详细贴心，最主要页面看的不是那么难看。</p>
-<h1 id="OK"><a href="#OK" class="headerlink" title="OK"></a>OK</h1><p>我想你已经完成你的博客的建立了，是不是很happy，我当时就老happy了，可是，记住写博客还是一件很艰难的事，时间久了，人就懒了，就不写了。当然，我知道说的不是你，(#^.^#)</p>
-]]></content>
-      
-        <categories>
-            
-            <category> tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> github </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Markdown的使用]]></title>
-      <url>/2018/01/12/Markdown/</url>
-      <content type="html"><![CDATA[<h1 id="Markdown的好处"><a href="#Markdown的好处" class="headerlink" title="Markdown的好处"></a>Markdown的好处</h1><ul>
-<li>比纯文本排版显示的好看</li>
-<li>比Word排版显示简单</li>
-<li>学起来简单</li>
-</ul>
-<a id="more"></a>
-<h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1><ul>
-<li><a href="http://wowubuntu.com/markdown/#list" target="_blank" rel="noopener">Markdown中文版语法说明</a></li>
-<li><a href="https://www.jianshu.com/p/q81RER" target="_blank" rel="noopener">博客1</a></li>
-<li><a href="https://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="noopener">博客2</a></li>
-</ul>
-<h1 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h1><ol>
-<li>不用什么语法都学，学几个常用的就可以，比如标题，<strong>粗体</strong>，<em>斜体</em>。</li>
-<li>你可以用<strong>通用文本编辑器</strong>：notepad++，sublime，也可以用<strong>专用</strong>的<a href="http://code52.org/DownmarkerWPF/" target="_blank" rel="noopener">MarkPad</a>,<a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a>。</li>
-</ol>
-<blockquote>
-<p>祝你开心每一天！！！<br>(<em>^▽^</em>)</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[链表中环的入口结点]]></title>
+    <url>%2F2018%2F04%2F19%2F419_1%2F</url>
+    <content type="text"><![CDATA[题目描述 一个链表中包含环，请找出该链表的环的入口结点。 代码 12345678910111213141516171819202122232425/* public class ListNode &#123; int val; ListNode next = null; ListNode(int val) &#123; this.val = val; &#125;&#125;*/import java.util.ArrayList;public class Solution &#123; public ListNode EntryNodeOfLoop(ListNode pHead) &#123; ArrayList&lt;ListNode&gt; list = new ArrayList&lt;ListNode&gt;(); if(pHead == null) return null; while(!list.contains(pHead))&#123; list.add(pHead); pHead = pHead.next; if(pHead == null) return null; &#125; return pHead; &#125;&#125; 思路遍历一遍链表，并将每个节点存入ArrayList,如果遍历过程中发现ArrayList已经存在当前节点，那说明这个就是我们要找的节点 坑1 题目说是链表有环，但是提交代码后，发现要判断这个链表有没有环。 知识点1 了解下ArrayList的contain方法是怎么实现的 More看别人提交的代码，像是在解一道数学题，首先你要设x=2y，然后回推，效率是高的，复杂度也低，但是耗脑子，可以学习一波。]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[从尾到头打印链表]]></title>
+    <url>%2F2018%2F04%2F19%2F419%2F</url>
+    <content type="text"><![CDATA[题目描述 输入一个链表，从尾到头打印链表每个节点的值。 代码 1234567891011121314151617181920212223242526272829303132/*** public class ListNode &#123;* int val;* ListNode next = null;** ListNode(int val) &#123;* this.val = val;* &#125;* &#125;**/import java.util.ArrayList;public class Solution &#123; public ArrayList&lt;Integer&gt; printListFromTailToHead(ListNode listNode) &#123; //存取链表中的数据 ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;(); //存取list的反向数据 ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;&gt;(); //如果为空，啥也不做 if(listNode == null) &#123; return list1; &#125; while(listNode!=null) &#123; list.add(listNode.val); listNode = listNode.next; &#125; for(int i = list.size()-1;i&gt;=0;i--) &#123; list1.add(list.get(i)); &#125; return list1; &#125;&#125; 思路链表读取存储到ArrayList中，然后再从ArrayList反向读取存储到另一个ArrayList（就是栈的操作） 坑1 我不是很确定空的ArrayList输出是什么，是”[]”; 知识点1 链表]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[删除链表中重复的结点]]></title>
+    <url>%2F2018%2F04%2F18%2F418%2F</url>
+    <content type="text"><![CDATA[题目描述 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。 例如，链表1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5 处理后为 1-&gt;2-&gt;5 代码 1234567891011121314151617181920212223242526272829303132/* public class ListNode &#123; int val; ListNode next = null; ListNode(int val) &#123; this.val = val; &#125;&#125;*/public class Solution &#123; public ListNode deleteDuplication(ListNode pHead) &#123; ListNode result; ListNode temp = pHead; ListNode index = new ListNode(1); index.next = pHead; result = index; while (temp != null) &#123; if (temp.next != null &amp;&amp; temp.next.val == temp.val) &#123; while (temp.next != null &amp;&amp; temp.next.val == temp.val) &#123; temp = temp.next; &#125; temp = temp.next; index.next = temp; &#125; else &#123; index = index.next; temp = temp.next; &#125; &#125; return result.next; &#125;&#125; 坑1 第一次提交删除了重复的节点，题目要求是所有重复的节点，一个也不留2 对于Java中引用理解需要加深3 链表的操作需要了解，这里尽管只有删除 知识点1 链表1.1 数据结构1.2 操作 2 Java中的引用]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[顺时针打印矩阵]]></title>
+    <url>%2F2018%2F04%2F17%2F417%2F</url>
+    <content type="text"><![CDATA[题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. 代码123456789101112131415161718192021222324252627282930313233343536373839404142import java.util.ArrayList;public class Solution &#123; public ArrayList&lt;Integer&gt; printMatrix(int [][] matrix) &#123; ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;(); //判断matrix是否为空 if(matrix == null || matrix.length == 0) return list; //matrix的行 int row = matrix.length; //matrix的列 int col = matrix[0].length; //方便矩阵的遍历 int rowStart = 0; int rowEnd = row - 1; int colStart = 0; int colEnd = col - 1; while(colStart &lt;= colEnd &amp;&amp; rowStart &lt;= rowEnd) &#123; for(int i = colStart; i &lt;= colEnd; i++) list.add(matrix[rowStart][i]); for(int i = rowStart+1; i &lt;= rowEnd; i++) list.add(matrix[i][colEnd]); //防止重复遍历 if(rowStart != rowEnd) &#123; for(int i = colEnd-1; i &gt;= colStart; i--) list.add(matrix[rowEnd][i]); &#125; //防止重复遍历 if(colStart != colEnd) &#123; for(int i = rowEnd-1; i &gt; rowStart; i--) list.add(matrix[i][colStart]); &#125; colStart++; colEnd--; rowStart++; rowEnd--; &#125; return list; &#125;&#125; 坑1 对于向量，从上到下（从左往右）和从下到上（从右往左）只要遍历一次。如：1int[][] a = &#123;&#123;1&#125;,&#123;2&#125;,&#123;3&#125;,&#123;4&#125;,&#123;5&#125;&#125; 2 很多边界例子不会考虑。 知识点1 高维数组1.1 如何定义一个二维（更高维）的数组123int[][] a = &#123;&#123;1,2,&#125;,&#123;3,4&#125;&#125;;int[][][] three = &#123;&#123;&#123;1,2&#125;,&#123;3,4&#125;&#125;,&#123;&#123;1,2&#125;,&#123;3,4&#125;&#125;&#125;;int[][] b = new int[2][2]; 1.2数组的长度12int row = matrix.length;int col = matrix[0].length; 1.3 java Arrays.deepToString()函数将高维数组字符串化 今天人生第一次来做这种题目，说实话不会做，做了会有很多错，尽管看起来很简单。]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[这几天]]></title>
+    <url>%2F2018%2F01%2F22%2F1.22%2F</url>
+    <content type="text"><![CDATA[好多天没有来玩博客，Markdown的语法也忘了，hexo的命令也忘了，导师的教我写的东西，一个月没碰了，啥啥啥都忘了。。。。 前几天无聊看了一波python文档，把廖老师写的文档和《简明Python教程》过了一遍，然后发现这是一个神奇的世界。 恩，写这个文章，其实也不是说我要介绍我这天的心得体会，就只是来冒个泡，写文章真的需要坚持，如果你不是职业的话，而且，我发现的我不知道写啥，内心啥也木有， 这几天看了一波吐槽大会，interesting，哈哈哈哈哈哈哈哈，然后还去下了一波《手把手教你脱口秀》，好有意思。 我还准备买个陶笛，人生最大的梦想，懂一波音乐。 这几天，大家都放假，氛围特别浓重，说实话，我都给自己放一个月了。。。。 不知道自己写了什么，就当记录一下吧，byebye。。。。。]]></content>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[多个电脑一起写blog]]></title>
+    <url>%2F2018%2F01%2F13%2Fblog%2F</url>
+    <content type="text"><![CDATA[你是不是也有这样子的问题，如果台式机可以写博客上传，那笔记本想写怎么办呢？我来告诉你。 传送门送上：1，2第一篇的文章比较短，但是就是精华，第二篇，有部分图文，会给你一些更直观的参考。 我呢，还是给大家一些建议 不要怕出错，说实话，对于一个小白来说，什么也不懂，什么是git啊，没关系，不要担心，要相信自己。 尽管你可能不懂git,可是这玩意还是不得不学的额，常见的命令 git pull origin hexo: 本机同步GitHub里的文章 git push origin hexo: 上传文章到GitHub]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[echo xi]]></title>
+    <url>%2F2018%2F01%2F13%2Ffirst%2F</url>
+    <content type="text"><![CDATA[xixiOK? 你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！ /(ㄒoㄒ)/~~]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Me]]></title>
+    <url>%2F2018%2F01%2F13%2FMe%2F</url>
+    <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[git的使用]]></title>
+    <url>%2F2018%2F01%2F13%2Fnote%2F</url>
+    <content type="text"><![CDATA[配置用户名和Email$ git config –global user.name “Your Name”$ git config –global user.email “email@example.com” 创建版本库初始化一个Git仓库，使用git init命令。添加文件到Git仓库，分两步： 第一步，使用命令git add ，注意，可反复多次使用，添加多个文件； 第二步，使用命令git commit -m “”，完成。 vim的使用i 进入输入模式ESC 退出输入模式，进入命令模式:wq 保存修改并退出vim 状态的查看和比较 比较 git diff 查看 git status 文件名 版本回退 查看历史 git log/git log –pretty=online当前版本用HEAD表示，HEAD^表示上一个版本，HEAD^^表示上上版本，HEAD~100表示上100个版本 回退到当前版本的上一个版本 git reset –hard HEAD^当你回退到以前版本，那当前版本会不见，可以使用 git reset –hard (commit id)来恢复 记录执行的每一次命令 git reflog通过此条命令可以查看到各个版本commit id HEAD指向当前版本git log 查看提交历史git reflog 查看命令历史 工作区和暂存区 工作区(Working Directory)就是当前目录 版本库(Repository)工作区中隐藏目录.git,Git的版本库版本库中有：暂存区、第一个分支master、指向master的一个指针HEAD 暂存区(Stage)把文件往Git版本库里添加的时候，分为两步第一步：git add，意义是把文件添加到暂存区第二步: git commit,意义是将暂存区的所有内容提交到当前分支开始默认我们在master分支 Git是如何跟踪修改的：每次修改，如果不add到暂存区，那就不会加入到commit中。 撤销和修改命令是：git checkout – filename file自修改后还没有被放到暂存区，使用命令后，返回版本库的状态 file已经添加到了暂存区，又作了修改，使用命令后，返回暂存区的状态总之，是文件返回最近一次git commit 或 git add 的状态 命令：git reset HEAD file指的是把暂存区的修改撤销，回到工作区的版本git reset 既可以回退版本，也可以把暂存区的修改回退到工作区。 总结： 场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。 删除文件将已经提交到版本库的文件删除，需要同步git git rm file git commit -m “”如果是误删git checkout – file 添加远程仓库 要关联一个远程库，使用命令**git remote add origin git@server-name:path/repo-name.git; 关联后，使用命令git push -u origin master 第一次推送master分支的所有内容; 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改; Tipsssh:是一个安全协议，git支持git协议。第一次使用ssh的时候，需要设置公钥和私钥，命令是 ssh-keygen -t rsa -C “youremail@example.com”对应的在用户主目录中会生成.ssh目录，目录中有id_rsa和id_rsa.pub两个文件 clone远程库命令是git clone git@server-name:path/repo-name.gitgit支持多种协议，包括https，ssh 等等 创建与合并分支 git checkout -b dev:创建了dev分支命令等同于：git branch dev ; git checkout dev git branch:查看当前分支，罗列出所有分支 git merge dev:将dev分支的工作成果合并到当前分支上 git branch -d dev:删除dev分支 解决冲突当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用git log –graph命令可以看到合并图。好看一点用git log –graph –pretty=oneline –abbrev -commit 分支策略 master分支用来发布新版本，平时不东 dev分支是用来干活的，干完活和master合并 每个团队成员创建自己的分支，是不是和dev分支合并 合并时，默认是fast forward合并，合并后删除分支后看不出是合并的，会丢失信息，加上–nn-ff参数就可以使用普通模式合并 Bug分支当我们遇到bug需要修复，手头的任务又没有做完，我们可以使用git stash来保护现场，类似于进程中断。当我们修复好bug后，我们可以用git stash list查看工作现场。 git stash git stash list git stash apply:恢复现场，但不删除stash git stash drop:删除stash git stash pop:等于上两步 feature分支开发一个新feature，最好创建一个分支；如果要丢弃一个没有被合并过的分支，可以通过git branch -D name 强行删除。 多人协作 git remote :用于查看远程库的信息 git remote -v :用于查看远程库的详细信息 git push origin master/dev :master分支需要和远程同步，dev分支也一样，bug分支不需要，feature分支看情况]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何建立一个独立博客]]></title>
+    <url>%2F2018%2F01%2F12%2Fhexo-github%2F</url>
+    <content type="text"><![CDATA[我来猜一猜你为什么要建博客：装逼，找个地方发泄，无聊。。。如果不对，你可以留言告诉我 ^_^ 前言如果你是小白，那你肯定会受好多挫，你可以百度也可以Google，当然我希望什么也不要遇到，因为我会告诉你所有可能的错，别问我为什么 o(╥﹏╥)o what you need ? git hexo github 这三个是啥呢？github，类似于一个服务器，这样别人就可以在网上找到你的博客，当然你也可以自己买服务器。hexo，模板，就是博客显示页面的样子，有好多好人已经写好了很多好看的模板，你挑一个喜欢的，当然你也可以自己写！git，上传工具，就是把你写好的东西，上传到网上。 安装gitGit下载:下载完就可以安装了，一路next 结束安装，检查自己有木有成功，Win+R，cmd 如果看见版本号，就成功啦！！是不是很惊喜，很开心，吼简单哦！！ 安装hexo恩~，这个地方有点烦的，请注意！！！官网：官方文档：很详细，可以仔细学习一波。我呢，就给一些注意事项 先要安装Node.js 在任何地方(比如桌面)右击，点击 git bash here，在输入 npm install -g hexo-cli 回车，输入画面如图： hexo是使用Markdown解析文章的，那标记后面需要一个空格图片中每个key后面都有空格，图中的绿色方框，有点大小不一，但都代表一个空格 最后写完文章部署的时候，可以用hexo clean &amp;&amp; hexo g &amp;&amp; hexo d一条命令我在写这个文档的时候，也重看了一边官网，虽说很详细，带我不想看啊，好烦啊，好烦啊，与木有这种感觉，o(╥﹏╥)o GitHub这个真的是一个好神奇的地方，抄作业的好地方，代码不会写，来抄一波，没有灵感，来搜一波，比什么百度靠谱多了。来一个传送门，这篇文章在这儿写的很详细贴心，最主要页面看的不是那么难看。 OK我想你已经完成你的博客的建立了，是不是很happy，我当时就老happy了，可是，记住写博客还是一件很艰难的事，时间久了，人就懒了，就不写了。当然，我知道说的不是你，(#^.^#)]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown的使用]]></title>
+    <url>%2F2018%2F01%2F12%2FMarkdown%2F</url>
+    <content type="text"><![CDATA[Markdown的好处 比纯文本排版显示的好看 比Word排版显示简单 学起来简单 学习资料 Markdown中文版语法说明 博客1 博客2 建议 不用什么语法都学，学几个常用的就可以，比如标题，粗体，斜体。 你可以用通用文本编辑器：notepad++，sublime，也可以用专用的MarkPad,Mou。 祝你开心每一天！！！(^▽^)]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
 </search>
