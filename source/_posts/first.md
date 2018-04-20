@@ -1,7 +1,7 @@
 ---
 title: echo xi
 tags: 
-categories: 
+categories: life
 ---
 
 ## xixi
