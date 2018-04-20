@@ -1,0 +1,52 @@
+---
+title: 链表总结 
+date: 2018-04-20 9:05:31
+tags: [链表]
+categories: 数据结构
+---
+
+> 链表是一种递归的数据机构，它或者为空(null)，或者是指向一个节点(node)的引用，该节点含有一个泛型的元素和一个指向另一条链表的引用。
+
+# 抽象数据类型
+```java
+/**
+*    public class ListNode {
+*        Object val;
+*        ListNode next = null;
+*
+*        ListNode() { }
+*        ListNode(Object val) {
+*            this.val = val;
+*        }
+*    }
+*/
+```
+
+<!--more-->
+
+上述代码定义了ListNode对象，有两个实例变量，val和next，val类型是任何你希望的数据类型（这里用了Object），next指下一个节点（默认为null）。
+这个定义可能会有写费解，因为这个是一个**递归的数据结构**。
+
+# 链表的操作
+## 表头插入节点
+```java
+ListNode oldfirst = first;
+first = new ListNode();
+first.next = oldfirst;
+```
+
+## 表头删除节点
+```java
+first = first.next;
+```
+
+## 表尾插入节点
+```java
+oldlast = last;
+last = new ListNode();
+oldlast.next = last;
+```
+
+# 如何学好链表
+可以和[这位](https://blog.csdn.net/jianyuerensheng/article/details/51200274)学下。
+也可以像算法第四版用链表实现一个栈、队列。
