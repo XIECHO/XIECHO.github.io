@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="树," />
 
 
 
@@ -96,17 +96,18 @@
 
 
 
-<meta name="description" content="Day Day Up Up !!!">
+<meta name="description" content="题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。  代码1234567891011121314151617181920212223242526272829303132333435/** * Defini">
+<meta name="keywords" content="树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hey LaLaLa">
-<meta property="og:url" content="http://yoursite.com/2018/04/20/420_1/index.html">
+<meta property="og:title" content="重建二叉树">
+<meta property="og:url" content="http://yoursite.com/2018/04/19/420_1/index.html">
 <meta property="og:site_name" content="Hey LaLaLa">
-<meta property="og:description" content="Day Day Up Up !!!">
+<meta property="og:description" content="题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。  代码1234567891011121314151617181920212223242526272829303132333435/** * Defini">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-20T04:01:31.516Z">
+<meta property="og:updated_time" content="2018-04-20T05:06:50.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hey LaLaLa">
-<meta name="twitter:description" content="Day Day Up Up !!!">
+<meta name="twitter:title" content="重建二叉树">
+<meta name="twitter:description" content="题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。  代码1234567891011121314151617181920212223242526272829303132333435/** * Defini">
 
 
 
@@ -135,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/20/420_1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/19/420_1/"/>
 
 
 
 
 
-  <title> | Hey LaLaLa</title>
+  <title>重建二叉树 | Hey LaLaLa</title>
   
 
 
@@ -308,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/420_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/420_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="echo">
@@ -325,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">重建二叉树</h1>
         
 
         <div class="post-meta">
@@ -337,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T12:01:31+08:00">
-                2018-04-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-19T12:02:33+08:00">
+                2018-04-19
               </time>
             
 
@@ -347,6 +348,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,7 +398,41 @@
       
 
       
-        
+        <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
+<p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for binary tree</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> [] pre,<span class="keyword">int</span> [] in)</span> </span>&#123;</span><br><span class="line">        TreeNode root=reConstructBinaryTree(pre,<span class="number">0</span>,pre.length-<span class="number">1</span>,in,<span class="number">0</span>,in.length-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//前序遍历&#123;1,2,4,7,3,5,6,8&#125;和中序遍历序列&#123;4,7,2,1,5,3,8,6&#125;</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span> [] pre,<span class="keyword">int</span> startPre,<span class="keyword">int</span> endPre,<span class="keyword">int</span> [] in,<span class="keyword">int</span> startIn,<span class="keyword">int</span> endIn)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//如果树为空 </span></span><br><span class="line">        <span class="keyword">if</span>(startPre&gt;endPre||startIn&gt;endIn)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="comment">//根据先序遍历确定root节点</span></span><br><span class="line">        TreeNode root=<span class="keyword">new</span> TreeNode(pre[startPre]);</span><br><span class="line">        <span class="comment">//递归：分别确定左子树和右子树</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=startIn;i&lt;=endIn;i++)</span><br><span class="line">   			<span class="comment">//确定子树的root节点</span></span><br><span class="line">            <span class="keyword">if</span>(in[i]==pre[startPre])&#123;</span><br><span class="line">            	<span class="comment">//左</span></span><br><span class="line">                root.left=reConstructBinaryTree(pre,startPre+<span class="number">1</span>,startPre+i-startIn,in,startIn,i-<span class="number">1</span>);</span><br><span class="line">                <span class="comment">//右</span></span><br><span class="line">                root.right=reConstructBinaryTree(pre,i-startIn+startPre+<span class="number">1</span>,endPre,in,i+<span class="number">1</span>,endIn);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>根据先序确定根节点，查找对应中序中位置，在中序位置左边为左子树，右边为右子树，递归调用。</p>
+<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 已经忘了如何根据前序和中序确定一棵树</p>
+<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>1 先序遍历（前序遍历）</p>
+<ul>
+<li>如果二叉树为空树，则什么都不做；否则：<ul>
+<li>访问根节点</li>
+<li>先序遍历左子树</li>
+<li>先序遍历右子树</li>
+</ul>
+</li>
+</ul>
+<p>2 中序遍历</p>
+<ul>
+<li>如果二叉树为空树，则什么都不做；否则：<ul>
+<li>先序遍历左子树</li>
+<li>访问根节点</li>
+<li>先序遍历右子树</li>
+</ul>
+</li>
+</ul>
+<p>3 后续遍历</p>
+<ul>
+<li>如果二叉树为空树，则什么都不做；否则：<ul>
+<li>先序遍历左子树</li>
+<li>先序遍历右子树</li>
+<li>访问根节点</li>
+</ul>
+</li>
+</ul>
+<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>回看树，其实树里有好多东西的</p>
+
       
     </div>
     
@@ -390,6 +447,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/树/" rel="tag"># 树</a>
+          
+        </div>
+      
 
       
       
@@ -399,8 +462,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/20/420/" rel="next" title="链表总结">
-                <i class="fa fa-chevron-left"></i> 链表总结
+              <a href="/2018/04/19/419_1/" rel="next" title="链表中环的入口结点">
+                <i class="fa fa-chevron-left"></i> 链表中环的入口结点
               </a>
             
           </div>
@@ -408,6 +471,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/20/420/" rel="prev" title="链表总结">
+                链表总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -459,8 +526,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -497,7 +573,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -542,6 +618,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坑"><span class="nav-number">4.</span> <span class="nav-text">坑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点"><span class="nav-number">5.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#More"><span class="nav-number">6.</span> <span class="nav-text">More</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
