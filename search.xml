@@ -12,6 +12,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[二叉树的下一个结点]]></title>
+    <url>%2F2018%2F04%2F23%2F424_1%2F</url>
+    <content type="text"><![CDATA[题目描述 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。 代码12345678910public class TreeLinkNode &#123; int val; TreeLinkNode left = null; TreeLinkNode right = null; TreeLinkNode next = null; TreeLinkNode(int val) &#123; this.val = val; &#125;&#125; 12345678910111213141516public class Solution &#123; TreeLinkNode GetNext(TreeLinkNode node) &#123; if(node==null) return null; if(node.right!=null)&#123; //如果有右子树，则找右子树的最左节点 node = node.right; while(node.left!=null) node = node.left; return node; &#125; while(node.next!=null)&#123; //没右子树，则找第一个当前节点是父节点左孩子的节点 if(node.next.left==node) return node.next; node = node.next; &#125; return null; //退到了根节点仍没找到，则返回null &#125;&#125; 思路 坑1 对应图片中的b）开始没有思考的那么透彻，像j节点，和M节点开始都是迷糊的。 知识点1 中序遍历 如果二叉树为空树，则什么都不做；否则： 先序遍历左子树 访问根节点 先序遍历右子树 More图片是出自小河沟大河沟]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[重建二叉树]]></title>
     <url>%2F2018%2F04%2F20%2F420_1%2F</url>
     <content type="text"><![CDATA[题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 代码123456789/** * Definition for binary tree * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */ 12345678910111213141516171819202122232425public class Solution &#123; public TreeNode reConstructBinaryTree(int [] pre,int [] in) &#123; TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1); return root; &#125; //前序遍历&#123;1,2,4,7,3,5,6,8&#125;和中序遍历序列&#123;4,7,2,1,5,3,8,6&#125; private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) &#123; //如果树为空 if(startPre&gt;endPre||startIn&gt;endIn) return null; //根据先序遍历确定root节点 TreeNode root=new TreeNode(pre[startPre]); //递归：分别确定左子树和右子树 for(int i=startIn;i&lt;=endIn;i++) //确定子树的root节点 if(in[i]==pre[startPre])&#123; //左 root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1); //右 root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn); break; &#125; return root; &#125;&#125; 思路根据先序确定根节点，查找对应中序中位置，在中序位置左边为左子树，右边为右子树，递归调用。 坑1 已经忘了如何根据前序和中序确定一棵树 知识点1 先序遍历（前序遍历） 如果二叉树为空树，则什么都不做；否则： 访问根节点 先序遍历左子树 先序遍历右子树 2 中序遍历 如果二叉树为空树，则什么都不做；否则： 先序遍历左子树 访问根节点 先序遍历右子树 3 后续遍历 如果二叉树为空树，则什么都不做；否则： 先序遍历左子树 先序遍历右子树 访问根节点 More回看树，其实树里有好多东西的]]></content>
@@ -102,11 +113,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Me]]></title>
-    <url>%2F2018%2F01%2F13%2FMe%2F</url>
-    <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[git的使用]]></title>
     <url>%2F2018%2F01%2F13%2Fnote%2F</url>
     <content type="text"><![CDATA[配置用户名和Email$ git config –global user.name “Your Name”$ git config –global user.email “email@example.com” 创建版本库初始化一个Git仓库，使用git init命令。添加文件到Git仓库，分两步： 第一步，使用命令git add ，注意，可反复多次使用，添加多个文件； 第二步，使用命令git commit -m “”，完成。 vim的使用i 进入输入模式ESC 退出输入模式，进入命令模式:wq 保存修改并退出vim 状态的查看和比较 比较 git diff 查看 git status 文件名 版本回退 查看历史 git log/git log –pretty=online当前版本用HEAD表示，HEAD^表示上一个版本，HEAD^^表示上上版本，HEAD~100表示上100个版本 回退到当前版本的上一个版本 git reset –hard HEAD^当你回退到以前版本，那当前版本会不见，可以使用 git reset –hard (commit id)来恢复 记录执行的每一次命令 git reflog通过此条命令可以查看到各个版本commit id HEAD指向当前版本git log 查看提交历史git reflog 查看命令历史 工作区和暂存区 工作区(Working Directory)就是当前目录 版本库(Repository)工作区中隐藏目录.git,Git的版本库版本库中有：暂存区、第一个分支master、指向master的一个指针HEAD 暂存区(Stage)把文件往Git版本库里添加的时候，分为两步第一步：git add，意义是把文件添加到暂存区第二步: git commit,意义是将暂存区的所有内容提交到当前分支开始默认我们在master分支 Git是如何跟踪修改的：每次修改，如果不add到暂存区，那就不会加入到commit中。 撤销和修改命令是：git checkout – filename file自修改后还没有被放到暂存区，使用命令后，返回版本库的状态 file已经添加到了暂存区，又作了修改，使用命令后，返回暂存区的状态总之，是文件返回最近一次git commit 或 git add 的状态 命令：git reset HEAD file指的是把暂存区的修改撤销，回到工作区的版本git reset 既可以回退版本，也可以把暂存区的修改回退到工作区。 总结： 场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。 删除文件将已经提交到版本库的文件删除，需要同步git git rm file git commit -m “”如果是误删git checkout – file 添加远程仓库 要关联一个远程库，使用命令**git remote add origin git@server-name:path/repo-name.git; 关联后，使用命令git push -u origin master 第一次推送master分支的所有内容; 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改; Tipsssh:是一个安全协议，git支持git协议。第一次使用ssh的时候，需要设置公钥和私钥，命令是 ssh-keygen -t rsa -C “youremail@example.com”对应的在用户主目录中会生成.ssh目录，目录中有id_rsa和id_rsa.pub两个文件 clone远程库命令是git clone git@server-name:path/repo-name.gitgit支持多种协议，包括https，ssh 等等 创建与合并分支 git checkout -b dev:创建了dev分支命令等同于：git branch dev ; git checkout dev git branch:查看当前分支，罗列出所有分支 git merge dev:将dev分支的工作成果合并到当前分支上 git branch -d dev:删除dev分支 解决冲突当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用git log –graph命令可以看到合并图。好看一点用git log –graph –pretty=oneline –abbrev -commit 分支策略 master分支用来发布新版本，平时不东 dev分支是用来干活的，干完活和master合并 每个团队成员创建自己的分支，是不是和dev分支合并 合并时，默认是fast forward合并，合并后删除分支后看不出是合并的，会丢失信息，加上–nn-ff参数就可以使用普通模式合并 Bug分支当我们遇到bug需要修复，手头的任务又没有做完，我们可以使用git stash来保护现场，类似于进程中断。当我们修复好bug后，我们可以用git stash list查看工作现场。 git stash git stash list git stash apply:恢复现场，但不删除stash git stash drop:删除stash git stash pop:等于上两步 feature分支开发一个新feature，最好创建一个分支；如果要丢弃一个没有被合并过的分支，可以通过git branch -D name 强行删除。 多人协作 git remote :用于查看远程库的信息 git remote -v :用于查看远程库的详细信息 git push origin master/dev :master分支需要和远程同步，dev分支也一样，bug分支不需要，feature分支看情况]]></content>
@@ -116,6 +122,11 @@
       <tags>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Me]]></title>
+    <url>%2F2018%2F01%2F13%2FMe%2F</url>
+    <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
   </entry>
   <entry>
     <title><![CDATA[echo xi]]></title>
