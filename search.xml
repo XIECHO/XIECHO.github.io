@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[把二叉树打印成多行]]></title>
+    <url>%2F2018%2F04%2F24%2F424%2F</url>
+    <content type="text"><![CDATA[题目描述 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。 代码1234567891011public class TreeNode &#123; int val = 0; TreeNode left = null; TreeNode right = null; public TreeNode(int val) &#123; this.val = val; &#125;&#125; 12345678910111213141516171819202122232425262728293031323334/** 队列LinkedList完成层序遍历，用end记录每层结点数目*/public class Solution &#123; ArrayList&lt;ArrayList&lt;Integer&gt; &gt; Print(TreeNode pRoot) &#123; ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt;(); if(pRoot == null)&#123; return result; &#125; Queue&lt;TreeNode&gt; layer = new LinkedList&lt;TreeNode&gt;(); ArrayList&lt;Integer&gt; layerList = new ArrayList&lt;Integer&gt;(); layer.add(pRoot); int start = 0, end = 1; while(!layer.isEmpty())&#123; TreeNode cur = layer.remove(); layerList.add(cur.val); start++; if(cur.left!=null)&#123; layer.add(cur.left); &#125; if(cur.right!=null)&#123; layer.add(cur.right); &#125; //判断start是否end,来确定一层一行 if(start == end)&#123; end = layer.size(); start = 0; result.add(layerList); layerList = new ArrayList&lt;Integer&gt;(); &#125; &#125; return result; &#125;&#125; 思路这个一个层次遍历的应用，中间需要记录每一行的开始（start）和结束（end），来确定一层输出一行。 坑1 我最开始的想法是每一个节点对应一个数字（行号）确定他是在哪一行，等到对应节点的行号与下一个节点不一样的时候，就换行。与上面的代码区别是多了一个ArrayList，记录好多不需要的信息，浪费了。 知识点1 层次遍历 层次遍历，底层就是一个队列。算法思路是： 先将二叉树头节点入队列，然后出队列，访问该节点，如果它有左子树，则将左子树根节点入队，如果它有右子树，则将右子树根节点入队。然后出队列，对出队列节点访问，如此反复，直到队列为空为止。 More代码中是通过LinkedList模拟队列的，Java把队列，栈等数据结构封装的很好，但是最好还是要自己来理解实现一下这些底层。最近有看redis，里面很多操作的底层也是这些基础。]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[重建二叉树]]></title>
     <url>%2F2018%2F04%2F20%2F420_1%2F</url>
     <content type="text"><![CDATA[题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 代码123456789/** * Definition for binary tree * public class TreeNode &#123; * int val; * TreeNode left; * TreeNode right; * TreeNode(int x) &#123; val = x; &#125; * &#125; */ 12345678910111213141516171819202122232425public class Solution &#123; public TreeNode reConstructBinaryTree(int [] pre,int [] in) &#123; TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1); return root; &#125; //前序遍历&#123;1,2,4,7,3,5,6,8&#125;和中序遍历序列&#123;4,7,2,1,5,3,8,6&#125; private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) &#123; //如果树为空 if(startPre&gt;endPre||startIn&gt;endIn) return null; //根据先序遍历确定root节点 TreeNode root=new TreeNode(pre[startPre]); //递归：分别确定左子树和右子树 for(int i=startIn;i&lt;=endIn;i++) //确定子树的root节点 if(in[i]==pre[startPre])&#123; //左 root.left=reConstructBinaryTree(pre,startPre+1,startPre+i-startIn,in,startIn,i-1); //右 root.right=reConstructBinaryTree(pre,i-startIn+startPre+1,endPre,in,i+1,endIn); break; &#125; return root; &#125;&#125; 思路根据先序确定根节点，查找对应中序中位置，在中序位置左边为左子树，右边为右子树，递归调用。 坑1 已经忘了如何根据前序和中序确定一棵树 知识点1 先序遍历（前序遍历） 如果二叉树为空树，则什么都不做；否则： 访问根节点 先序遍历左子树 先序遍历右子树 2 中序遍历 如果二叉树为空树，则什么都不做；否则： 先序遍历左子树 访问根节点 先序遍历右子树 3 后续遍历 如果二叉树为空树，则什么都不做；否则： 先序遍历左子树 先序遍历右子树 访问根节点 More回看树，其实树里有好多东西的]]></content>
@@ -20,17 +31,6 @@
       </categories>
       <tags>
         <tag>链表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[把二叉树打印成多行]]></title>
-    <url>%2F2018%2F04%2F20%2F424%2F</url>
-    <content type="text"><![CDATA[题目描述 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。 代码1234567891011public class TreeNode &#123; int val = 0; TreeNode left = null; TreeNode right = null; public TreeNode(int val) &#123; this.val = val; &#125;&#125; 12345678910111213141516171819202122232425262728293031323334/** 队列LinkedList完成层序遍历，用end记录每层结点数目*/public class Solution &#123; ArrayList&lt;ArrayList&lt;Integer&gt; &gt; Print(TreeNode pRoot) &#123; ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt;(); if(pRoot == null)&#123; return result; &#125; Queue&lt;TreeNode&gt; layer = new LinkedList&lt;TreeNode&gt;(); ArrayList&lt;Integer&gt; layerList = new ArrayList&lt;Integer&gt;(); layer.add(pRoot); int start = 0, end = 1; while(!layer.isEmpty())&#123; TreeNode cur = layer.remove(); layerList.add(cur.val); start++; if(cur.left!=null)&#123; layer.add(cur.left); &#125; if(cur.right!=null)&#123; layer.add(cur.right); &#125; //判断start是否end,来确定一层一行 if(start == end)&#123; end = layer.size(); start = 0; result.add(layerList); layerList = new ArrayList&lt;Integer&gt;(); &#125; &#125; return result; &#125;&#125; 思路这个一个层次遍历的应用，中间需要记录每一行的开始（start）和结束（end），来确定一层输出一行。 坑1 我最开始的想法是每一个节点对应一个数字（行号）确定他是在哪一行，等到对应节点的行号与下一个节点不一样的时候，就换行。与上面的代码区别是多了一个ArrayList，记录好多不需要的信息，浪费了。 知识点1 层次遍历 层次遍历，底层就是一个队列。算法思路是： 先将二叉树头节点入队列，然后出队列，访问该节点，如果它有左子树，则将左子树根节点入队，如果它有右子树，则将右子树根节点入队。然后出队列，对出队列节点访问，如此反复，直到队列为空为止。]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-      <tags>
-        <tag>树</tag>
       </tags>
   </entry>
   <entry>
