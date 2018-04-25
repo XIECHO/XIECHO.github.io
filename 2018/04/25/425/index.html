@@ -96,20 +96,18 @@
 
 
 
-<meta name="description" content="题目描述 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。  代码12345678910public class TreeLinkNode &amp;#123;    int val;    TreeLinkNode left = null;    TreeLinkNode right = null;    TreeLi">
+<meta name="description" content="题目描述 操作给定的二叉树，将其变换为源二叉树的镜像。输入描述:二叉树的镜像定义：源二叉树          8         /  \         6   10        / \  / \       5  7 9 11      镜像二叉树           8          /  \         10   6       / \  / \       11 9 7  5">
 <meta name="keywords" content="树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树的下一个结点">
-<meta property="og:url" content="http://yoursite.com/2018/04/23/424_1/index.html">
+<meta property="og:title" content="二叉树的镜像">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/425/index.html">
 <meta property="og:site_name" content="Hey LaLaLa">
-<meta property="og:description" content="题目描述 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。  代码12345678910public class TreeLinkNode &amp;#123;    int val;    TreeLinkNode left = null;    TreeLinkNode right = null;    TreeLi">
+<meta property="og:description" content="题目描述 操作给定的二叉树，将其变换为源二叉树的镜像。输入描述:二叉树的镜像定义：源二叉树          8         /  \         6   10        / \  / \       5  7 9 11      镜像二叉树           8          /  \         10   6       / \  / \       11 9 7  5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/二叉树的下一个结点%20.png">
-<meta property="og:updated_time" content="2018-04-24T02:47:10.405Z">
+<meta property="og:updated_time" content="2018-04-25T01:15:54.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树的下一个结点">
-<meta name="twitter:description" content="题目描述 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。  代码12345678910public class TreeLinkNode &amp;#123;    int val;    TreeLinkNode left = null;    TreeLinkNode right = null;    TreeLi">
-<meta name="twitter:image" content="http://yoursite.com/images/二叉树的下一个结点%20.png">
+<meta name="twitter:title" content="二叉树的镜像">
+<meta name="twitter:description" content="题目描述 操作给定的二叉树，将其变换为源二叉树的镜像。输入描述:二叉树的镜像定义：源二叉树          8         /  \         6   10        / \  / \       5  7 9 11      镜像二叉树           8          /  \         10   6       / \  / \       11 9 7  5">
 
 
 
@@ -138,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/23/424_1/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/425/"/>
 
 
 
 
 
-  <title>二叉树的下一个结点 | Hey LaLaLa</title>
+  <title>二叉树的镜像 | Hey LaLaLa</title>
   
 
 
@@ -311,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/424_1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/425/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="echo">
@@ -328,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">二叉树的下一个结点</h1>
+          <h1 class="post-title" itemprop="name headline">二叉树的镜像</h1>
         
 
         <div class="post-meta">
@@ -340,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T10:01:23+08:00">
-                2018-04-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T09:06:55+08:00">
+                2018-04-25
               </time>
             
 
@@ -401,23 +399,14 @@
 
       
         <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。</p>
+<p>操作给定的二叉树，将其变换为源二叉树的镜像。<br>输入描述:<br>二叉树的镜像定义：源二叉树<br>          8<br>         /  \<br>         6   10<br>        / \  / \<br>       5  7 9 11<br>      镜像二叉树<br>           8<br>          /  \<br>         10   6<br>       / \  / \<br>       11 9 7  5</p>
 </blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeLinkNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeLinkNode left = <span class="keyword">null</span>;</span><br><span class="line">    TreeLinkNode right = <span class="keyword">null</span>;</span><br><span class="line">    TreeLinkNode next = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    TreeLinkNode(<span class="keyword">int</span> val) &#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">public class TreeNode &#123;</span></span><br><span class="line"><span class="comment">    int val = 0;</span></span><br><span class="line"><span class="comment">    TreeNode left = null;</span></span><br><span class="line"><span class="comment">    TreeNode right = null;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    public TreeNode(int val) &#123;</span></span><br><span class="line"><span class="comment">        this.val = val;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function">TreeLinkNode <span class="title">GetNext</span><span class="params">(TreeLinkNode node)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(node==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>)&#123;    <span class="comment">//如果有右子树，则找右子树的最左节点</span></span><br><span class="line">            node = node.right;</span><br><span class="line">            <span class="keyword">while</span>(node.left!=<span class="keyword">null</span>) node = node.left;</span><br><span class="line">            <span class="keyword">return</span> node;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(node.next!=<span class="keyword">null</span>)&#123; <span class="comment">//没右子树，则找第一个当前节点是父节点左孩子的节点</span></span><br><span class="line">            <span class="keyword">if</span>(node.next.left==node) <span class="keyword">return</span> node.next;</span><br><span class="line">            node = node.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;   <span class="comment">//退到了根节点仍没找到，则返回null</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p><img src="/images/二叉树的下一个结点 .png" alt="二叉树的下一个结点"></p>
-<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 对应图片中的b）开始没有思考的那么透彻，像j节点，和M节点开始都是迷糊的。</p>
-<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>1 中序遍历</p>
-<ul>
-<li>如果二叉树为空树，则什么都不做；否则：<ul>
-<li>先序遍历左子树</li>
-<li>访问根节点</li>
-<li>先序遍历右子树</li>
-</ul>
-</li>
-</ul>
-<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>图片是出自<a href="https://www.nowcoder.com/profile/773262" target="_blank" rel="noopener">小河沟大河沟</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Mirror</span><span class="params">(TreeNode pRoot)</span> </span>&#123;</span><br><span class="line">        Mirror2(root);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Mirror2</span><span class="params">(TreeNode t)</span></span>&#123;</span><br><span class="line">        TreeNode temp = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span>(t != <span class="keyword">null</span>)&#123;</span><br><span class="line">            temp = t.left;</span><br><span class="line">            t.left = t.right;</span><br><span class="line">            t.right = temp;</span><br><span class="line">            Mirror2(t.left);</span><br><span class="line">            Mirror2(t.right);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>将左右两个子树交换，递归的调用</p>
+<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 开始的时候将Mirror2(t.left)，Mirror2(t.right)写在了外面，这样的话，会报空，因为if走完后，接着走这两条。</p>
+<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>感觉人生第一次用递归一次写完这个题目，并提交成功，吼开心。。。。。</p>
 
       
     </div>
@@ -448,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/20/420_1/" rel="next" title="重建二叉树">
-                <i class="fa fa-chevron-left"></i> 重建二叉树
+              <a href="/2018/04/24/424_2/" rel="next" title="对称的二叉树">
+                <i class="fa fa-chevron-left"></i> 对称的二叉树
               </a>
             
           </div>
@@ -457,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/24/424/" rel="prev" title="把二叉树打印成多行">
-                把二叉树打印成多行 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坑"><span class="nav-number">4.</span> <span class="nav-text">坑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点"><span class="nav-number">5.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#More"><span class="nav-number">6.</span> <span class="nav-text">More</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#坑"><span class="nav-number">4.</span> <span class="nav-text">坑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#More"><span class="nav-number">5.</span> <span class="nav-text">More</span></a></li></ol></div>
             
 
           </div>
