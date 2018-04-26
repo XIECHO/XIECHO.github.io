@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-25T01:15:54.018Z</updated>
+  <updated>2018-04-26T07:14:10.602Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>递归、非递归遍历二叉树</title>
+    <link href="http://yoursite.com/2018/04/26/426/"/>
+    <id>http://yoursite.com/2018/04/26/426/</id>
+    <published>2018-04-26T06:28:31.000Z</published>
+    <updated>2018-04-26T07:14:10.602Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="树定义"><a href="#树定义" class="headerlink" title="树定义"></a>树定义</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">    TreeNode left = <span class="keyword">null</span>;</span><br><span class="line">    TreeNode right = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h1><h2 id="先序遍历递归"><a href="#先序遍历递归" class="headerlink" title="先序遍历递归"></a>先序遍历递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preorder</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    System.out.print(root);</span><br><span class="line">    preorder(root.left);</span><br><span class="line">    preorder(root.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="先序遍历非递归"><a href="#先序遍历非递归" class="headerlink" title="先序遍历非递归"></a>先序遍历非递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">preorder2</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    LinkedList&lt;TreeNode&gt; list = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span>(root != <span class="keyword">null</span> || !list.isEmpty())&#123;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(root);</span><br><span class="line">            list.push(root);</span><br><span class="line">            root = root.left;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!list.isEmpty())&#123;</span><br><span class="line">            root = list.pop();</span><br><span class="line">            root = root.right();</span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="中序遍历递归"><a href="#中序遍历递归" class="headerlink" title="中序遍历递归"></a>中序遍历递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorder</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    inorder(root.left);</span><br><span class="line">    System.out.print(root);</span><br><span class="line">    inorder(root.right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="中序遍历非递归"><a href="#中序遍历非递归" class="headerlink" title="中序遍历非递归"></a>中序遍历非递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorder2</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    LinkedList&lt;TreeNode&gt; list = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span>(root != <span class="keyword">null</span> || !list.isEmpty())&#123;</span><br><span class="line">        <span class="keyword">if</span>(root != <span class="keyword">null</span>)&#123;</span><br><span class="line">            list.push(root);</span><br><span class="line">            root = root.left;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!list.isEmpty())&#123;</span><br><span class="line">            root = list.pop();</span><br><span class="line">            System.out.print(root);</span><br><span class="line">            root = root.right();</span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="后序遍历递归"><a href="#后序遍历递归" class="headerlink" title="后序遍历递归"></a>后序遍历递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postorder</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    postorder(root.left);</span><br><span class="line">    postorder(root.right);</span><br><span class="line">    System.out.print(root);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="后序遍历非递归"><a href="#后序遍历非递归" class="headerlink" title="后序遍历非递归"></a>后序遍历非递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postorder2</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">    LinkedList&lt;TreeNode&gt; list = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    LinkedList&lt;TreeNode&gt; list2 = <span class="keyword">new</span> LinkedList&lt;&gt;(); </span><br><span class="line">    <span class="keyword">while</span>(root != <span class="keyword">null</span> || !list.empty()) &#123;  </span><br><span class="line">        <span class="keyword">while</span> (root != <span class="keyword">null</span>) &#123;  </span><br><span class="line">            list.push(root);  </span><br><span class="line">            list2.push(<span class="keyword">new</span> Integer(<span class="number">0</span>));  </span><br><span class="line">            root = root.left;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">while</span> (!list.empty() &amp;&amp; list2.peek().equals(<span class="number">1</span>)) &#123;  </span><br><span class="line">            list2.pop();  </span><br><span class="line">            System.out.print(list.pop());  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">if</span> (!list.empty()) &#123;  </span><br><span class="line">            list2.pop();  </span><br><span class="line">            list2.push(<span class="keyword">new</span> Integer(<span class="number">1</span>));  </span><br><span class="line">            root = list.peek();  </span><br><span class="line">            root = root.right;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>/(ㄒoㄒ)/<del>/(ㄒoㄒ)/</del></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;树定义&quot;&gt;&lt;a href=&quot;#树定义&quot; class=&quot;headerlink&quot; title=&quot;树定义&quot;&gt;&lt;/a&gt;树定义&lt;/h1&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TreeNode&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; val = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TreeNode left = &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    TreeNode right = &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TreeNode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; val)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.val = val;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;先序遍历&quot;&gt;&lt;a href=&quot;#先序遍历&quot; class=&quot;headerlink&quot; title=&quot;先序遍历&quot;&gt;&lt;/a&gt;先序遍历&lt;/h1&gt;&lt;h2 id=&quot;先序遍历递归&quot;&gt;&lt;a href=&quot;#先序遍历递归&quot; class=&quot;headerlink&quot; title=&quot;先序遍历递归&quot;&gt;&lt;/a&gt;先序遍历递归&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;preorder&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(TreeNode root)&lt;/span&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.print(root);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    preorder(root.left);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    preorder(root.right);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="树" scheme="http://yoursite.com/tags/%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>二叉树的镜像</title>
@@ -354,6 +375,28 @@
   </entry>
   
   <entry>
+    <title>Me</title>
+    <link href="http://yoursite.com/2018/01/13/Me/"/>
+    <id>http://yoursite.com/2018/01/13/Me/</id>
+    <published>2018-01-13T05:05:14.602Z</published>
+    <updated>2018-01-13T05:05:14.602Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hey,大家好！！！<br>你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Hey,大家好！！！&lt;br&gt;你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>echo xi</title>
     <link href="http://yoursite.com/2018/01/13/first/"/>
     <id>http://yoursite.com/2018/01/13/first/</id>
@@ -372,28 +415,6 @@
     </summary>
     
       <category term="life" scheme="http://yoursite.com/categories/life/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Me</title>
-    <link href="http://yoursite.com/2018/01/13/Me/"/>
-    <id>http://yoursite.com/2018/01/13/Me/</id>
-    <published>2018-01-13T05:05:14.602Z</published>
-    <updated>2018-01-13T05:05:14.602Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hey,大家好！！！<br>你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Hey,大家好！！！&lt;br&gt;你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。&lt;/p&gt;
-
-      
-    
-    </summary>
     
     
   </entry>
