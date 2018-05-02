@@ -309,6 +309,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/427data/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="echo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hey LaLaLa">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/27/427data/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T15:44:30+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: SQL入门<br>date: 2018-04-27 15:37:21<br>tags: [SQL]</p>
+<h2 id="categories"><a href="#categories" class="headerlink" title="categories: "></a>categories: </h2><h1 id="数据操作语言（DML）"><a href="#数据操作语言（DML）" class="headerlink" title="数据操作语言（DML）"></a>数据操作语言（DML）</h1><ul>
+<li>select: 从数据库中获取数据</li>
+<li>update： 更新数据库表中的数据 </li>
+<li>delete： 从数据库中删除数据</li>
+<li>insert into : 向数据库中插入数据</li>
+</ul>
+<h1 id="数据定义语言（DDL）"><a href="#数据定义语言（DDL）" class="headerlink" title="数据定义语言（DDL）"></a>数据定义语言（DDL）</h1><p>用于创建和删除表格，也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<ul>
+<li>create database : 创建新数据库</li>
+<li>alter database : 修改数据库</li>
+<li>create table ： 创建新表</li>
+<li>alter table : 变更（改变）数据库表</li>
+<li>drop table : 删除表</li>
+<li>create index ： 创建索引（搜索键）</li>
+<li>drop index : 删除索引</li>
+</ul>
+<h1 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h1><h2 id="select语句"><a href="#select语句" class="headerlink" title="select语句"></a>select语句</h2><ul>
+<li>select 列名称 from 表名称</li>
+<li>select * from 表名称</li>
+</ul>
+<h2 id="select-distinct"><a href="#select-distinct" class="headerlink" title="select distinct"></a>select distinct</h2><p>去重复</p>
+<ul>
+<li>select distinct 列名称 from 表名称</li>
+</ul>
+<h2 id="where子句"><a href="#where子句" class="headerlink" title="where子句"></a>where子句</h2><p>如需有条件地从表中选取数据，可将where子句添加到select语句。</p>
+<ul>
+<li>select 列名称 from 表名称 where 列 运算符 值<br>运算符： =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=, between, like</li>
+</ul>
+<h2 id="AND和OR运算符"><a href="#AND和OR运算符" class="headerlink" title="AND和OR运算符"></a>AND和OR运算符</h2><p>可在where子语句中把两个或多个条件结合起来。</p>
+<ul>
+<li>select * from Persons where FirstName=’Thomas’ and LastName=’Carter’</li>
+</ul>
+<h2 id="order-by语句"><a href="#order-by语句" class="headerlink" title="order by语句"></a>order by语句</h2><p>order by 语句用于根据指定的列对结果集进行排序。<br>默认升序，降序用desc。</p>
+<ul>
+<li>select Company，OrderNumber from Orders order by Company desc</li>
+<li>select Company, ORderNumber from orders order by Company desc, orderNumber asc</li>
+</ul>
+<p>desc: descend; asc: ascend</p>
+<h2 id="insert-into语句"><a href="#insert-into语句" class="headerlink" title="insert into语句"></a>insert into语句</h2><p>插入新的行。</p>
+<ul>
+<li>insert into 表名称 values(值1， 值2， …)</li>
+<li><p>insert into table_name(列1，列2，…) values(值1，值2，…)</p>
+</li>
+<li><p>insert into Persons(lastName, Address) values (‘Wilson’, ‘Chapms-Elysees’)</p>
+</li>
+</ul>
+<h2 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h2><ul>
+<li>update 表名称 set 列名称 = ‘新值’ where 列名称 = 某值</li>
+</ul>
+<h2 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h2><p>删除表中的行</p>
+<ul>
+<li>delect from 表名称 where 列名称 = 值<br>删除所有行</li>
+<li>delect from table_name</li>
+</ul>
+<h2 id="limit语句"><a href="#limit语句" class="headerlink" title="limit语句"></a>limit语句</h2><p>返回表中头几行</p>
+<ul>
+<li>select * from table_name limit number</li>
+</ul>
+<h2 id="like操作符"><a href="#like操作符" class="headerlink" title="like操作符"></a>like操作符</h2><p>like操作符用于在where子句中搜索列中的指定模式。</p>
+<ul>
+<li>select * from Persons where city like ‘N%’<br>%可用于定义通配符（模式中缺少的字母）， NOT指代不包含</li>
+<li>select * from Persons where city not like ‘%lon%’</li>
+</ul>
+<h2 id="SQL通配符"><a href="#SQL通配符" class="headerlink" title="SQL通配符"></a>SQL通配符</h2><p>通配符必须与Like运算符一起使用</p>
+<p>通配符 | 描述<br>% | 代替一个或多个字符</p>
+<ul>
+<li>| 仅代替一个字符</li>
+</ul>
+<h2 id="in"><a href="#in" class="headerlink" title="in"></a>in</h2><ul>
+<li>select * from table_name where 列 in (值1，值2)</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/427/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1593,160 +1785,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/419_1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="echo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hey LaLaLa">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/419_1/" itemprop="url">链表中环的入口结点</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-19T11:12:33+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
-<p>一个链表中包含环，请找出该链表的环的入口结点。</p>
-</blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> public class ListNode &#123;</span></span><br><span class="line"><span class="comment">    int val;</span></span><br><span class="line"><span class="comment">    ListNode next = null;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    ListNode(int val) &#123;</span></span><br><span class="line"><span class="comment">        this.val = val;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/19/419_1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1792,7 +1835,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

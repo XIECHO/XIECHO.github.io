@@ -2,6 +2,11 @@
 <search>
   <entry>
     <title></title>
+    <url>%2F2018%2F04%2F27%2F427data%2F</url>
+    <content type="text"><![CDATA[title: SQL入门date: 2018-04-27 15:37:21tags: [SQL] categories: 数据操作语言（DML） select: 从数据库中获取数据 update： 更新数据库表中的数据 delete： 从数据库中删除数据 insert into : 向数据库中插入数据 数据定义语言（DDL）用于创建和删除表格，也可以定义索引（键），规定表之间的链接，以及施加表间的约束。 create database : 创建新数据库 alter database : 修改数据库 create table ： 创建新表 alter table : 变更（改变）数据库表 drop table : 删除表 create index ： 创建索引（搜索键） drop index : 删除索引 语句select语句 select 列名称 from 表名称 select * from 表名称 select distinct去重复 select distinct 列名称 from 表名称 where子句如需有条件地从表中选取数据，可将where子句添加到select语句。 select 列名称 from 表名称 where 列 运算符 值运算符： =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=, between, like AND和OR运算符可在where子语句中把两个或多个条件结合起来。 select * from Persons where FirstName=’Thomas’ and LastName=’Carter’ order by语句order by 语句用于根据指定的列对结果集进行排序。默认升序，降序用desc。 select Company，OrderNumber from Orders order by Company desc select Company, ORderNumber from orders order by Company desc, orderNumber asc desc: descend; asc: ascend insert into语句插入新的行。 insert into 表名称 values(值1， 值2， …) insert into table_name(列1，列2，…) values(值1，值2，…) insert into Persons(lastName, Address) values (‘Wilson’, ‘Chapms-Elysees’) update语句 update 表名称 set 列名称 = ‘新值’ where 列名称 = 某值 delete语句删除表中的行 delect from 表名称 where 列名称 = 值删除所有行 delect from table_name limit语句返回表中头几行 select * from table_name limit number like操作符like操作符用于在where子句中搜索列中的指定模式。 select * from Persons where city like ‘N%’%可用于定义通配符（模式中缺少的字母）， NOT指代不包含 select * from Persons where city not like ‘%lon%’ SQL通配符通配符必须与Like运算符一起使用 通配符 | 描述% | 代替一个或多个字符 | 仅代替一个字符 in select * from table_name where 列 in (值1，值2)]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>%2F2018%2F04%2F27%2F427%2F</url>
     <content type="text"><![CDATA[title: 数组中重复的数字 &amp;&amp; 构建乘积数组date: 2018-04-27 10:37:21tags: [数组] categories: algorithm题目描述 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2。 代码1234567891011121314151617181920212223public class Solution &#123; // Parameters: // numbers: an array of integers // length: the length of array numbers // duplication: (Output) the duplicated number in the array number,length of duplication array is 1,so using duplication[0] = ? in implementation; // Here duplication like pointor in C/C++, duplication[0] equal *duplication in C/C++ // 这里要特别注意~返回任意重复的一个，赋值duplication[0] // Return value: true if the input is valid, and there are some duplications in the array number // otherwise false public boolean duplicate(int numbers[],int length,int [] duplication) &#123; boolean[] temp = new boolean[length]; for(int i = 0; i&lt;length; i++)&#123; int tempInt = numbers[i]; if(!temp[tempInt])&#123; temp[tempInt] = true; &#125;else&#123; duplication[0] = tempInt; return true; &#125; &#125; return false; &#125;&#125; 思路用一个Boolean数组判断数字有没有重复过。 坑1 Boolean数组默认初始值是false 题目描述 给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]A[1]…A[i-1]A[i+1]…A[n-1]。不能使用除法 代码```javaimport java.util.ArrayList;public class Solution { public int[] multiply(int[] A) { int aLength = A.length; int[] value = new int[aLength]; for(int i = 0 ; i]]></content>
   </entry>
@@ -159,11 +164,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Me]]></title>
-    <url>%2F2018%2F01%2F13%2FMe%2F</url>
-    <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[echo xi]]></title>
     <url>%2F2018%2F01%2F13%2Ffirst%2F</url>
     <content type="text"><![CDATA[xixiOK? 你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！ /(ㄒoㄒ)/~~]]></content>
@@ -181,6 +181,11 @@
       <tags>
         <tag>git</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Me]]></title>
+    <url>%2F2018%2F01%2F13%2FMe%2F</url>
+    <content type="text"><![CDATA[Hey,大家好！！！你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。]]></content>
   </entry>
   <entry>
     <title><![CDATA[如何建立一个独立博客]]></title>
