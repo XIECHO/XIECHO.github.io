@@ -18,25 +18,33 @@
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[字符串]]></title>
       <url>/2018/04/28/428_2/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: 字符串<br>date: 2018-04-28 14:14:21<br>tags: [字符串]</p>
-<h2 id="categories-algorithm"><a href="#categories-algorithm" class="headerlink" title="categories: algorithm"></a>categories: algorithm</h2><h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+      <content type="html"><![CDATA[<h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
 <p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        String strT = str.toString();</span><br><span class="line">        String temp = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">char</span>[] ch = strT.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ch.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(ch[i] == <span class="string">' '</span>)&#123;</span><br><span class="line">                temp = temp + <span class="string">"%20"</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp = temp + ch[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 ]]></content>
       
+        <categories>
+            
+            <category> algorithm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
         
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[递归]]></title>
       <url>/2018/04/28/428_1/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: 递归<br>date: 2018-04-28 10:14:21<br>tags: [递归]</p>
-<h2 id="categories-algorithm"><a href="#categories-algorithm" class="headerlink" title="categories: algorithm"></a>categories: algorithm</h2><h1 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+      <content type="html"><![CDATA[<h1 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
 <p>大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项。n&lt;=39</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span> )&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> Fibonacci(n-<span class="number">1</span>)+Fibonacci(n-<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
@@ -58,15 +66,25 @@
 <h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>其实就是Fibonacci序列的等价转换。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> algorithm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 递归 </tag>
+            
+        </tags>
         
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[二维数组中的查找]]></title>
       <url>/2018/04/28/428/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: 二维数组中的查找<br>date: 2018-04-28 8:44:21<br>tags: [数组]</p>
-<h2 id="categories-algorithm"><a href="#categories-algorithm" class="headerlink" title="categories: algorithm"></a>categories: algorithm</h2><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
+      <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><blockquote>
 <p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
 </blockquote>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> target, <span class="keyword">int</span> [][] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rowLength = array.length;</span><br><span class="line">        <span class="keyword">int</span> columnLength = array[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = rowLength-<span class="number">1</span>, j = <span class="number">0</span>; i&gt;=<span class="number">0</span> &amp;&amp; j&lt;columnLength;  )&#123;</span><br><span class="line">            <span class="keyword">if</span>(array[i][j] &lt; target)&#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(array[i][j] &gt; target)&#123;</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(array[i][j] == target)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -75,15 +93,25 @@
 <h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><p>1 如何判断一个二位数组为空，一是数组首地址是否为空，二是是否为{}，也就是array.length==0的情况，三是\left\left\right\right，这时array.length=1，但是array[0].length==0。满足任意一个条件就可以返回false了。<br>if(array==null||array.length==0||(array.length==1&amp;&amp;array[0].length==0)) return false;</p>
 ]]></content>
       
+        <categories>
+            
+            <category> algorithm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
         
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[SQL入门]]></title>
       <url>/2018/04/27/427data/</url>
-      <content type="html"><![CDATA[<hr>
-<p>title: SQL入门<br>date: 2018-04-27 15:37:21<br>tags: [SQL]</p>
-<h2 id="categories"><a href="#categories" class="headerlink" title="categories: "></a>categories: </h2><h1 id="数据操作语言（DML）"><a href="#数据操作语言（DML）" class="headerlink" title="数据操作语言（DML）"></a>数据操作语言（DML）</h1><ul>
+      <content type="html"><![CDATA[<h1 id="数据操作语言（DML）"><a href="#数据操作语言（DML）" class="headerlink" title="数据操作语言（DML）"></a>数据操作语言（DML）</h1><ul>
 <li>select: 从数据库中获取数据</li>
 <li>update： 更新数据库表中的数据 </li>
 <li>delete： 从数据库中删除数据</li>
@@ -155,6 +183,12 @@
 </ul>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> SQL </tag>
+            
+        </tags>
         
     </entry>
     
