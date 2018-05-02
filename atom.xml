@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-02T06:49:34.916Z</updated>
+  <updated>2018-05-02T07:01:18.353Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/05/01/501/"/>
     <id>http://yoursite.com/2018/05/01/501/</id>
     <published>2018-05-01T14:38:07.000Z</published>
-    <updated>2018-05-02T06:49:34.916Z</updated>
+    <updated>2018-05-02T07:01:18.353Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/images/IMG_1955.JPG" alt="4"><br><img src="/images/IMG_1959.JPG" alt="5"><br><a id="more"></a><br><img src="/images/IMG_1961.JPG" alt="6"><br><img src="/images/IMG_1964.JPG" alt="9"><br><img src="/images/IMG_1967.JPG" alt="10"><br><img src="/images/IMG_1968.JPG" alt="11"><br><img src="/images/IMG_1996.JPG" alt="14"><br><img src="/images/IMG_1998.JPG" alt="15"></p>]]></content>
     
@@ -31,8 +31,8 @@
     
     </summary>
     
+      <category term="life" scheme="http://yoursite.com/categories/life/"/>
     
-      <category term="life" scheme="http://yoursite.com/tags/life/"/>
     
   </entry>
   
@@ -116,7 +116,7 @@
     <link href="http://yoursite.com/2018/04/27/427data/"/>
     <id>http://yoursite.com/2018/04/27/427data/</id>
     <published>2018-04-27T07:37:21.000Z</published>
-    <updated>2018-05-02T06:57:36.998Z</updated>
+    <updated>2018-05-02T07:02:15.777Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数据操作语言（DML）"><a href="#数据操作语言（DML）" class="headerlink" title="数据操作语言（DML）"></a>数据操作语言（DML）</h1><ul><li>select: 从数据库中获取数据</li><li>update： 更新数据库表中的数据 </li><li>delete： 从数据库中删除数据</li><li>insert into : 向数据库中插入数据</li></ul><h1 id="数据定义语言（DDL）"><a href="#数据定义语言（DDL）" class="headerlink" title="数据定义语言（DDL）"></a>数据定义语言（DDL）</h1><p>用于创建和删除表格，也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p><ul><li>create database : 创建新数据库</li><li>alter database : 修改数据库</li><li>create table ： 创建新表</li><li>alter table : 变更（改变）数据库表</li><li>drop table : 删除表</li><li>create index ： 创建索引（搜索键）</li><li>drop index : 删除索引<a id="more"></a><h1 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h1><h2 id="select语句"><a href="#select语句" class="headerlink" title="select语句"></a>select语句</h2></li><li>select 列名称 from 表名称</li><li>select * from 表名称</li></ul><h2 id="select-distinct"><a href="#select-distinct" class="headerlink" title="select distinct"></a>select distinct</h2><p>去重复</p><ul><li>select distinct 列名称 from 表名称</li></ul><h2 id="where子句"><a href="#where子句" class="headerlink" title="where子句"></a>where子句</h2><p>如需有条件地从表中选取数据，可将where子句添加到select语句。</p><ul><li>select 列名称 from 表名称 where 列 运算符 值<br>运算符： =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=, between, like</li></ul><h2 id="AND和OR运算符"><a href="#AND和OR运算符" class="headerlink" title="AND和OR运算符"></a>AND和OR运算符</h2><p>可在where子语句中把两个或多个条件结合起来。</p><ul><li>select * from Persons where FirstName=’Thomas’ and LastName=’Carter’</li></ul><h2 id="order-by语句"><a href="#order-by语句" class="headerlink" title="order by语句"></a>order by语句</h2><p>order by 语句用于根据指定的列对结果集进行排序。<br>默认升序，降序用desc。</p><ul><li>select Company，OrderNumber from Orders order by Company desc</li><li>select Company, ORderNumber from orders order by Company desc, orderNumber asc</li></ul><p>desc: descend; asc: ascend</p><h2 id="insert-into语句"><a href="#insert-into语句" class="headerlink" title="insert into语句"></a>insert into语句</h2><p>插入新的行。</p><ul><li>insert into 表名称 values(值1， 值2， …)</li><li><p>insert into table_name(列1，列2，…) values(值1，值2，…)</p></li><li><p>insert into Persons(lastName, Address) values (‘Wilson’, ‘Chapms-Elysees’)</p></li></ul><h2 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h2><ul><li>update 表名称 set 列名称 = ‘新值’ where 列名称 = 某值</li></ul><h2 id="delete语句"><a href="#delete语句" class="headerlink" title="delete语句"></a>delete语句</h2><p>删除表中的行</p><ul><li>delect from 表名称 where 列名称 = 值<br>删除所有行</li><li>delect from table_name</li></ul><h2 id="limit语句"><a href="#limit语句" class="headerlink" title="limit语句"></a>limit语句</h2><p>返回表中头几行</p><ul><li>select * from table_name limit number</li></ul><h2 id="like操作符"><a href="#like操作符" class="headerlink" title="like操作符"></a>like操作符</h2><p>like操作符用于在where子句中搜索列中的指定模式。</p><ul><li>select * from Persons where city like ‘N%’<br>%可用于定义通配符（模式中缺少的字母）， NOT指代不包含</li><li>select * from Persons where city not like ‘%lon%’</li></ul><h2 id="SQL通配符"><a href="#SQL通配符" class="headerlink" title="SQL通配符"></a>SQL通配符</h2><p>通配符必须与Like运算符一起使用</p><p>通配符 | 描述<br>% | 代替一个或多个字符</p><ul><li>| 仅代替一个字符</li></ul><h2 id="in"><a href="#in" class="headerlink" title="in"></a>in</h2><ul><li>select * from table_name where 列 in (值1，值2)</li></ul>]]></content>
     
@@ -139,6 +139,8 @@
 &lt;li&gt;drop index : 删除索引
     
     </summary>
+    
+      <category term="database" scheme="http://yoursite.com/categories/database/"/>
     
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
