@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-28T02:55:54.990Z</updated>
+  <updated>2018-04-28T06:00:44.109Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/04/28/428_2/"/>
+    <id>http://yoursite.com/2018/04/28/428_2/</id>
+    <published>2018-04-28T05:59:20.828Z</published>
+    <updated>2018-04-28T06:00:44.109Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: 字符串<br>date: 2018-04-28 14:14:21<br>tags: [字符串 ]</p><h2 id="categories-algorithm"><a href="#categories-algorithm" class="headerlink" title="categories: algorithm"></a>categories: algorithm</h2><h1 id="替换空格"><a href="#替换空格" class="headerlink" title="替换空格"></a>替换空格</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote><p>请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        String strT = str.toString();</span><br><span class="line">        String temp = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">char</span>[] ch = strT.toCharArray();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ch.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(ch[i] == <span class="string">' '</span>)&#123;</span><br><span class="line">                temp = temp + <span class="string">"%20"</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp = temp + ch[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: 字符串&lt;br&gt;date: 2018-04-28 14:14:21&lt;br&gt;tags: [字符串 ]&lt;/p&gt;
+&lt;h2 id=&quot;categories-algorithm&quot;&gt;&lt;a href=&quot;#categories-algorithm&quot; class=&quot;hea
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -441,29 +464,6 @@
   </entry>
   
   <entry>
-    <title>echo xi</title>
-    <link href="http://yoursite.com/2018/01/13/first/"/>
-    <id>http://yoursite.com/2018/01/13/first/</id>
-    <published>2018-01-13T05:05:14.602Z</published>
-    <updated>2018-04-20T03:01:55.451Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3><blockquote><p>你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！  /(ㄒoㄒ)/~~</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;xixi&quot;&gt;&lt;a href=&quot;#xixi&quot; class=&quot;headerlink&quot; title=&quot;xixi&quot;&gt;&lt;/a&gt;xixi&lt;/h2&gt;&lt;h3 id=&quot;OK&quot;&gt;&lt;a href=&quot;#OK&quot; class=&quot;headerlink&quot; title=&quot;OK?&quot;&gt;&lt;/a&gt;OK?&lt;
-      
-    
-    </summary>
-    
-      <category term="life" scheme="http://yoursite.com/categories/life/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>git的使用</title>
     <link href="http://yoursite.com/2018/01/13/note/"/>
     <id>http://yoursite.com/2018/01/13/note/</id>
@@ -492,23 +492,24 @@
   </entry>
   
   <entry>
-    <title>Me</title>
-    <link href="http://yoursite.com/2018/01/13/Me/"/>
-    <id>http://yoursite.com/2018/01/13/Me/</id>
+    <title>echo xi</title>
+    <link href="http://yoursite.com/2018/01/13/first/"/>
+    <id>http://yoursite.com/2018/01/13/first/</id>
     <published>2018-01-13T05:05:14.602Z</published>
-    <updated>2018-01-13T05:05:14.602Z</updated>
+    <updated>2018-04-20T03:01:55.451Z</updated>
     
-    <content type="html"><![CDATA[<p>Hey,大家好！！！<br>你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3><blockquote><p>你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！  /(ㄒoㄒ)/~~</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Hey,大家好！！！&lt;br&gt;你们可以叫我echo，这是三毛的英文名，感觉三毛和荷西的爱情很酷，所以我随了三毛。&lt;/p&gt;
-
+        &lt;h2 id=&quot;xixi&quot;&gt;&lt;a href=&quot;#xixi&quot; class=&quot;headerlink&quot; title=&quot;xixi&quot;&gt;&lt;/a&gt;xixi&lt;/h2&gt;&lt;h3 id=&quot;OK&quot;&gt;&lt;a href=&quot;#OK&quot; class=&quot;headerlink&quot; title=&quot;OK?&quot;&gt;&lt;/a&gt;OK?&lt;
       
     
     </summary>
+    
+      <category term="life" scheme="http://yoursite.com/categories/life/"/>
     
     
   </entry>
