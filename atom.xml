@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-28T06:00:44.109Z</updated>
+  <updated>2018-05-02T06:07:17.258Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仙居之旅</title>
+    <link href="http://yoursite.com/2018/05/01/501/"/>
+    <id>http://yoursite.com/2018/05/01/501/</id>
+    <published>2018-05-01T14:38:07.000Z</published>
+    <updated>2018-05-02T06:07:17.258Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/IMG_1955.JPG" alt="4"><br><img src="/images/IMG_1959.JPG" alt="5"><br><img src="/images/IMG_1961.JPG" alt="6"><br><img src="/images/IMG_1964.JPG" alt="9"><br><img src="/images/IMG_1967.JPG" alt="10"><br><img src="/images/IMG_1968.JPG" alt="11"><br><img src="/images/IMG_1996.JPG" alt="14"><br><img src="/images/IMG_1998.JPG" alt="15"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/IMG_1955.JPG&quot; alt=&quot;4&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/IMG_1959.JPG&quot; alt=&quot;5&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/IMG_1961.JPG&quot; alt=&quot;6&quot;&gt;&lt;br&gt;&lt;img 
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="http://yoursite.com/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -488,29 +511,6 @@
     
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>echo xi</title>
-    <link href="http://yoursite.com/2018/01/13/first/"/>
-    <id>http://yoursite.com/2018/01/13/first/</id>
-    <published>2018-01-13T05:05:14.602Z</published>
-    <updated>2018-04-20T03:01:55.451Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="xixi"><a href="#xixi" class="headerlink" title="xixi"></a>xixi</h2><h3 id="OK"><a href="#OK" class="headerlink" title="OK?"></a>OK?</h3><blockquote><p>你知道吗？ 我看别人的博客都是名言警句随口来，我呢，刚刚憋了许久，木有啊！！  /(ㄒoㄒ)/~~</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;xixi&quot;&gt;&lt;a href=&quot;#xixi&quot; class=&quot;headerlink&quot; title=&quot;xixi&quot;&gt;&lt;/a&gt;xixi&lt;/h2&gt;&lt;h3 id=&quot;OK&quot;&gt;&lt;a href=&quot;#OK&quot; class=&quot;headerlink&quot; title=&quot;OK?&quot;&gt;&lt;/a&gt;OK?&lt;
-      
-    
-    </summary>
-    
-      <category term="life" scheme="http://yoursite.com/categories/life/"/>
-    
     
   </entry>
   
