@@ -198,7 +198,7 @@
     <url>%2F2018%2F04%2F20%2F420%2F</url>
     <content type="text"><![CDATA[链表是一种递归的数据机构，它或者为空(null)，或者是指向一个节点(node)的引用，该节点含有一个泛型的元素和一个指向另一条链表的引用。 抽象数据类型1234567891011/*** public class ListNode &#123;* Object val;* ListNode next = null;** ListNode() &#123; &#125;* ListNode(Object val) &#123;* this.val = val;* &#125;* &#125;*/ 上述代码定义了ListNode对象，有两个实例变量，val和next，val类型是任何你希望的数据类型（这里用了Object），next指下一个节点（默认为null）。这个定义可能会有写费解，因为这个是一个递归的数据结构。 链表的操作表头插入节点123ListNode oldfirst = first;first = new ListNode();first.next = oldfirst; 表头删除节点1first = first.next; 表尾插入节点123oldlast = last;last = new ListNode();oldlast.next = last; 如何学好链表可以和这位学下。也可以像算法第四版用链表实现一个栈、队列。]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>总结</category>
       </categories>
       <tags>
         <tag>链表</tag>
