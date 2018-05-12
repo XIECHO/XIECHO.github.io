@@ -555,8 +555,7 @@
 
       
         
-          
-            <p>String类中有一个 char value[] 字符数组，很多操作都是对数组操作 </p>
+          <p>String类中有一个 char value[] 字符数组，很多操作都是对数组操作 </p>
 <h1 id="String类的常用方法"><a href="#String类的常用方法" class="headerlink" title="String类的常用方法"></a>String类的常用方法</h1><h2 id="获取功能"><a href="#获取功能" class="headerlink" title="获取功能"></a>获取功能</h2><ul>
 <li><p>int length() : 获取字符串的长度，也就是获取字符串中包含的字符数</p>
 <ul>
@@ -579,45 +578,13 @@
 <li><p>String subString(int beginIndex) : 获取从指定位置开始一直到结尾的字串</p>
 </li>
 </ul>
-<h2 id="判断功能"><a href="#判断功能" class="headerlink" title="判断功能"></a>判断功能</h2><ul>
-<li><p>boolean contains(CharSequence s) : 判断字符串是否为空</p>
-<ul>
-<li>contains的底层为 indexOf方法</li>
-<li>CharSequence是一个接口,实现子类有String、StringBuilder和StringBuffer<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(CharSequence s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> indexOf(s.toString()) &gt; -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>boolean isEmpty() </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value.length == <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>boolean startsWith(String str) : 判断字符串是否以指定内容开头</p>
-<ul>
-<li>boolean endsWith(String str)</li>
-</ul>
-</li>
-<li><p>boolean equals(String str) : </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">        String anotherString = (String)anObject;</span><br><span class="line">        <span class="keyword">int</span> n = value.length;</span><br><span class="line">        <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">            <span class="keyword">char</span> v1[] = value;</span><br><span class="line">            <span class="keyword">char</span> v2[] = anotherString.value;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="替换功能"><a href="#替换功能" class="headerlink" title="替换功能"></a>替换功能</h2><ul>
-<li><p>String replace(char oldChar, char newChar)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">replace</span><span class="params">(CharSequence target, CharSequence replacement)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Pattern.compile(target.toString(), Pattern.LITERAL).matcher(</span><br><span class="line">            <span class="keyword">this</span>).replaceAll(Matcher.quoteReplacement(replacement.toString()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用正则表达式解析，replace返回的是新的字符串引用，如果没有替换的内容，则返回原来的字符串引用</li>
-<li>String replace (CharSequence target, CharSequence replacement)</li>
-</ul>
-</li>
-</ul>
-<h2 id="转换功能"><a href="#转换功能" class="headerlink" title="转换功能"></a>转换功能</h2><ul>
-<li>static String valueOf():可以操作字符数组，也可以是基本类型</li>
-<li>char[] toCharArray(): 字符串==&gt;字符数组</li>
-</ul>
-<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><ul>
-<li>int compareTo(String anotherString) : 实际上是实现CompareTo接口的方法compareTo()</li>
-<li>String[] split(String regex) : 参数可以是正则表达式，也可以是普通字符串</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/10/510/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
