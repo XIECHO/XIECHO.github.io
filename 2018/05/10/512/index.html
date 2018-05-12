@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Hey LaLaLa">
 <meta property="og:description" content="线程的创建 继承Thread类  1234567class MyThread extends Thread&amp;#123;	public void run() &amp;#123;		while(true) &amp;#123;			System.out.println(&quot;MyThread类的run()方法在运行&quot;);		&amp;#125;	&amp;#125;&amp;#125;  实现Runnable接口  1234567class">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-12T06:59:04.965Z">
+<meta property="og:updated_time" content="2018-05-12T07:03:01.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程归纳">
 <meta name="twitter:description" content="线程的创建 继承Thread类  1234567class MyThread extends Thread&amp;#123;	public void run() &amp;#123;		while(true) &amp;#123;			System.out.println(&quot;MyThread类的run()方法在运行&quot;);		&amp;#125;	&amp;#125;&amp;#125;  实现Runnable接口  1234567class">
@@ -422,7 +422,40 @@
 <h2 id="同步方法"><a href="#同步方法" class="headerlink" title="同步方法"></a>同步方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> 返回值类型 方法名([参数<span class="number">1</span>,....])&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>同步代码块的锁是自己定义的任意类型的对象，同步方法的锁当前调用该方法的对象，静态方法的锁是该方法所在类的class对象。<br>同步解决了安全问题，但降低了效率。</p>
 <h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><h2 id="同步队列-BlockingQueue"><a href="#同步队列-BlockingQueue" class="headerlink" title="同步队列 BlockingQueue"></a>同步队列 BlockingQueue</h2><p>是一个接口</p>
-<p>|     | 抛出异常 | 特殊值 | 阻塞 | 超时 |<br>| 插入 | add(e) | offer(e) | put(e) |offer(e, time, unit) |<br>| 移除 | remove() | poll() | take() | poll(time, unit) |<br>| 检查 | element() | peek() | 不可用 | 不可用 |</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">抛出异常</th>
+<th style="text-align:right">特殊值</th>
+<th>阻塞</th>
+<th>超时</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>插入</td>
+<td style="text-align:center">add(e)</td>
+<td style="text-align:right">offer(e)</td>
+<td>put(e)</td>
+<td>offer(e, time, unit)</td>
+</tr>
+<tr>
+<td>移除</td>
+<td style="text-align:center">remove()</td>
+<td style="text-align:right">poll()</td>
+<td>take()</td>
+<td>poll(time, unit)</td>
+</tr>
+<tr>
+<td>检查</td>
+<td style="text-align:center">element()</td>
+<td style="text-align:right">peek()</td>
+<td>不可用</td>
+<td>不可用</td>
+</tr>
+</tbody>
+</table>
 <h1 id="多线程通信"><a href="#多线程通信" class="headerlink" title="多线程通信"></a>多线程通信</h1><ul>
 <li>void wait() : 当前线程放弃同步锁并进入等待，直到其他线程进入此同步锁，并调用notify()方法，或notifyAll()方法唤醒该线程为止</li>
 <li>void notify() : 唤醒此同步锁上等待的第一个调用wait()方法的线程</li>
