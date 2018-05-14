@@ -1,8 +1,8 @@
---- 
+---
 title: SQL入门 
 date: 2018-04-27 15:37:21
 tags: [SQL]
-categories: 
+categories: database
 ---
 # 数据操作语言（DML）
 - select: 从数据库中获取数据
@@ -20,7 +20,7 @@ categories:
 - drop table : 删除表
 - create index ： 创建索引（搜索键）
 - drop index : 删除索引
-
+<!--more-->
 # 语句
 ## select语句
 - select 列名称 from 表名称
